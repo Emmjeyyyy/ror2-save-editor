@@ -22,7 +22,6 @@ export const SURVIVORS: SurvivorDef[] = [
   { id: 'DroneTech', name: 'Operator', description: 'Drone specialist (Modded).', requiredAchievement: '' },
 ];
 
-// Comprehensive list of achievements derived from user data for the manual editor
 export const ACHIEVEMENTS: AchievementDef[] = [
   // White Items
   { id: 'RepeatedlyDuplicateItems', name: '...Maybe One More.', description: 'Duplicate the same item 7 times in a row with a 3D Printer.', category: 'Item' },
@@ -287,4 +286,69 @@ export const ALL_ACHIEVEMENTS_LIST = [
   "DroneTechJuggleLemurian", "DroneTechUniqueDrones", "DroneTechClearGameMonsoon", "DrifterJunkCubeAchievement", 
   "DrifterTornadoSlamAchievement", "DrifterTinkerAchievement", "DrifterClearGameMonsoon", "BeatVoidFields",
   "ObtainArtifactPrestige"
+];
+
+// Comprehensive list of Unlock Tokens for stats section (Items, Equip, Survivors, Artifacts, Skins)
+// These tokens are required for the item to actually drop in-game, independent of the achievement being "complete".
+export const ALL_UNLOCKS = [
+  // --- Survivors ---
+  "Characters.Huntress", "Characters.Bandit2", "Characters.Toolbot", "Characters.Engi",
+  "Characters.Mage", "Characters.Merc", "Characters.Treebot", "Characters.Loader",
+  "Characters.Croco", "Characters.Captain", "Characters.Railgunner", "Characters.VoidSurvivor",
+  "Characters.Seeker", "Characters.Chef", "Characters.FalseSon", "Characters.Drifter", "Characters.DroneTech",
+
+  // --- Artifacts ---
+  "Artifacts.Bomb", "Artifacts.Command", "Artifacts.Delusion", "Artifacts.Devotion",
+  "Artifacts.EliteOnly", "Artifacts.Enigma", "Artifacts.FriendlyFire", "Artifacts.Glass",
+  "Artifacts.MixEnemy", "Artifacts.MonsterTeamGainsItems", "Artifacts.RandomSurvivorOnRespawn",
+  "Artifacts.Sacrifice", "Artifacts.ShadowClone", "Artifacts.SingleMonsterType", "Artifacts.Swarms",
+  "Artifacts.TeamDeath", "Artifacts.WeakAssKnees", "Artifacts.WispOnDeath", "Artifacts.Rebirth", "Artifacts.Prestige",
+
+  // --- Items (Common/White) ---
+  "Items.Bear", "Items.Hoof", "Items.Crowbar", "Items.Medkit", "Items.Firework", 
+  "Items.SecondarySkillMagazine", "Items.TreasureCache", "Items.BossDamageBonus", "Items.CritGlasses", 
+  "Items.PersonalShield", "Items.Mushroom", "Items.AttackSpeedOnCrit", "Items.BleedOnHit", 
+  "Items.SprintOutOfCombat", "Items.FallBoots", "Items.WardOnLevel", "Items.Phasing", 
+  "Items.HealOnCrit", "Items.HealWhileSafe", "Items.EquipmentMagazine", "Items.NovaOnHeal", 
+  "Items.ShockNearby", "Items.Infusion", "Items.WarCryOnMultiKill", "Items.Clover", 
+  "Items.Bandolier", "Items.ChainLightning", "Items.BounceNearby", "Items.StickyBomb", 
+  "Items.StunChanceOnHit", "Items.BarrierOnOverHeal", "Items.GoldOnHit", "Items.Thorns", 
+  "Items.DroneWeapons", "Items.Icicle", "Items.GhostOnKill", "Items.MageAttunement", 
+  "Items.FlatHealth", "Items.Tooth", "Items.Pearl", "Items.ShinyPearl", "Items.BonusGoldPackOnKill",
+  "Items.Squid", "Items.LaserTurbine", "Items.Seed", "Items.HardenedGlass", "Items.FocusConvergence",
+  "Items.TitanGoldDuringTP", "Items.SprintWisp", "Items.BarrierOnKill", "Items.ArmorPlate",
+  "Items.TpHealingNova", "Items.FightBonusAtLowHealth",
+
+  // --- Items (Uncommon/Green) ---
+  "Items.Feather", "Items.SlowOnHit", "Items.EquipmentMagazine", "Items.HealOnCrit",
+  "Items.ExecuteLowHealthElite", "Items.EnergizedOnEquipmentUse", "Items.JumpBoost",
+  "Items.Missile", "Items.ExplodeOnDeath", "Items.StrengthOfFallen", "Items.PrimarySkillShuriken",
+  "Items.FreeChest", "Items.MoveSpeedOnKill", "Items.AttackSpeedOnCrit", "Items.TPHealingNova",
+
+  // --- Items (Legendary/Red) ---
+  "Items.ExtraLife", "Items.BounceNearby", "Items.ShockNearby", "Items.NovaOnHeal",
+  "Items.GhostOnKill", "Items.ReduceAliens", "Items.Plant", "Items.IncreaseHealing",
+  "Items.KillEliteMonster", "Items.HeadHunter", "Items.AlienHead", "Items.Talisman",
+  "Items.UtilitySkillMagazine", "Items.LaserTurbine", "Items.Behemoth", "Items.Dagger",
+  "Items.ImmuneToDebuff", "Items.CaptainDefenseMatrix",
+
+  // --- Items (Void) ---
+  "Items.VoidBear", "Items.VoidMegaCrabItem", "Items.VoidCoin", "Items.VoidMan",
+  "Items.MissileVoid", "Items.ChainLightningVoid", "Items.VoidCritGlasses", "Items.VoidBackpack",
+  "Items.VoidBleedOnHit", "Items.VoidTripleJump", "Items.VoidBarnacle",
+
+  // --- Equipment ---
+  "Equipment.CommandMissile", "Equipment.Fruit", "Equipment.DroneBackup", "Equipment.Meteor",
+  "Equipment.Blackhole", "Equipment.CritOnUse", "Equipment.BFG", "Equipment.Jetpack",
+  "Equipment.Lightning", "Equipment.PassiveHealing", "Equipment.BurnNearby", "Equipment.Scanner",
+  "Equipment.Gateway", "Equipment.FireBallDash", "Equipment.Recycle", "Equipment.Cleanse",
+  "Equipment.Tonic", "Equipment.GainArmor", "Equipment.LifestealOnHit", "Equipment.TeamWarCry",
+  "Equipment.DeathProjectile", "Equipment.Saw",
+
+  // --- Skins (Mastery & Alt) ---
+  "Skins.Commando.Alt1", "Skins.Huntress.Alt1", "Skins.Bandit2.Alt1", "Skins.Toolbot.Alt1",
+  "Skins.Engi.Alt1", "Skins.Mage.Alt1", "Skins.Merc.Alt1", "Skins.Treebot.Alt1",
+  "Skins.Loader.Alt1", "Skins.Croco.Alt1", "Skins.Captain.Alt1", "Skins.Railgunner.Alt1",
+  "Skins.VoidSurvivor.Alt1", "Skins.Seeker.Alt1", "Skins.Chef.Alt1", "Skins.FalseSon.Alt1",
+  "Skins.Drifter.Alt1", "Skins.DroneTech.Alt1"
 ];

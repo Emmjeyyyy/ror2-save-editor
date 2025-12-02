@@ -1,26 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import DragDrop from './components/DragDrop';
-import GeneralEditor from './components/GeneralEditor';
 import SurvivorEditor from './components/SurvivorEditor';
 import ArtifactEditor from './components/ArtifactEditor';
 import AchievementEditor from './components/AchievementEditor';
 import { ParsedProfile, Tab } from './types';
 import { parseProfile, generateXML, downloadProfile } from './services/profileService';
-import { CloudRain, Users, Trophy, Settings, AlertTriangle, Download, X, User as UserIcon, Hexagon } from 'lucide-react';
+import { CloudRain, Users, Trophy, AlertTriangle, Download, X, User as UserIcon, Hexagon, CheckCircle } from 'lucide-react';
 
 const App: React.FC = () => {
   const [profile, setProfile] = useState<ParsedProfile | null>(null);
-  const [activeTab, setActiveTab] = useState<Tab>(Tab.General);
+  const [activeTab, setActiveTab] = useState<Tab>(Tab.Survivors);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
+  const [notification, setNotification] = useState<{message: string, type: 'success' | 'error'} | null>(null);
+  const notificationTimer = useRef<number | null>(null);
+
+  const showNotification = (message: string, type: 'success' | 'error' = 'success') => {
+    if (notificationTimer.current) {
+        window.clearTimeout(notificationTimer.current);
+    }
+    setNotification({ message, type });
+    notificationTimer.current = window.setTimeout(() => {
+        setNotification(null);
+        notificationTimer.current = null;
+    }, 4000);
+  };
 
   const handleFileLoad = (content: string, name: string) => {
     try {
       const parsed = parseProfile(content, name);
       setProfile(parsed);
-      setActiveTab(Tab.General);
+      setActiveTab(Tab.Survivors);
+      showNotification("Profile loaded successfully!", "success");
     } catch (e) {
       console.error(e);
-      alert("Error parsing file. Please ensure it is a valid RoR2 XML profile.");
+      showNotification("Error parsing file. Please ensure it is a valid RoR2 XML profile.", "error");
     }
   };
 
@@ -65,12 +78,43 @@ const App: React.FC = () => {
                 Runs locally in your browser. No data is uploaded.
             </footer>
         </main>
+        
+        {/* Notification Toast for Load Error */}
+        {notification && (
+            <div className="fixed bottom-6 right-6 z-50 animate-in slide-in-from-bottom-5 fade-in duration-300">
+                <div className={`
+                    flex items-center gap-4 px-5 py-4 rounded-xl border shadow-2xl backdrop-blur-md min-w-[320px]
+                    ${notification.type === 'success' 
+                        ? 'bg-ror-panel/95 border-ror-green/30 shadow-ror-green/10' 
+                        : 'bg-ror-panel/95 border-red-500/30 shadow-red-500/10'}
+                `}>
+                    <div className={`
+                        p-2 rounded-full flex-shrink-0
+                        ${notification.type === 'success' ? 'bg-ror-green/10 text-ror-green' : 'bg-red-500/10 text-red-500'}
+                    `}>
+                        {notification.type === 'success' ? <CheckCircle size={24} /> : <AlertTriangle size={24} />}
+                    </div>
+                    <div className="flex-1">
+                        <h4 className={`font-bold text-sm ${notification.type === 'success' ? 'text-ror-green' : 'text-red-400'}`}>
+                            {notification.type === 'success' ? 'Operation Successful' : 'Error'}
+                        </h4>
+                        <p className="text-sm text-gray-300 leading-tight mt-0.5">{notification.message}</p>
+                    </div>
+                    <button 
+                        onClick={() => setNotification(null)}
+                        className="text-gray-500 hover:text-white transition-colors p-1"
+                    >
+                        <X size={18} />
+                    </button>
+                </div>
+            </div>
+        )}
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-black text-gray-200 flex flex-col md:flex-row overflow-hidden font-sans">
+    <div className="h-screen bg-black text-gray-200 flex flex-col md:flex-row overflow-hidden font-sans">
       {/* Sidebar Navigation */}
       <aside className="w-full md:w-64 bg-ror-panel border-r border-white/10 flex-shrink-0 flex flex-col z-20">
         <div className="p-6 border-b border-white/10 flex items-center gap-3">
@@ -78,9 +122,8 @@ const App: React.FC = () => {
            <span className="font-bold text-lg text-white">Save Editor</span>
         </div>
         
-        <nav className="flex-1 p-3 space-y-1">
+        <nav className="flex-1 p-3 space-y-1 overflow-hidden">
             {[
-                { id: Tab.General, icon: Settings, label: 'General' },
                 { id: Tab.Survivors, icon: Users, label: 'Survivors' },
                 { id: Tab.Artifacts, icon: Hexagon, label: 'Artifacts' },
                 { id: Tab.Achievements, icon: Trophy, label: 'Achievements' },
@@ -101,7 +144,7 @@ const App: React.FC = () => {
             ))}
         </nav>
 
-        <div className="p-4 border-t border-white/10 bg-black/20">
+        <div className="p-4 border-t border-white/10 bg-black/20 mt-auto">
              <div className="flex items-center gap-3 mb-4">
                  <div className="p-2 bg-gray-800 rounded-full">
                     <UserIcon size={16} className="text-gray-400" />
@@ -136,19 +179,19 @@ const App: React.FC = () => {
             <header className="mb-8">
                 <h1 className="text-3xl font-bold text-white mb-1">{activeTab}</h1>
                 <p className="text-gray-500 text-sm">
-                    {activeTab === Tab.General && "Manage currency and global unlocks"}
-                    {activeTab === Tab.Survivors && "Unlock playable characters"}
+                    {activeTab === Tab.Survivors && "Manage survivors, skins, and currency"}
                     {activeTab === Tab.Artifacts && "Toggle game modifiers"}
                     {activeTab === Tab.Achievements && "Search and unlock specific achievements"}
                 </p>
             </header>
 
             <div>
-                {activeTab === Tab.General && (
-                    <GeneralEditor profile={profile} setProfile={setProfile} onSave={handleSave} />
-                )}
                 {activeTab === Tab.Survivors && (
-                    <SurvivorEditor profile={profile} setProfile={setProfile} />
+                    <SurvivorEditor 
+                      profile={profile} 
+                      setProfile={setProfile} 
+                      onShowNotification={(msg) => showNotification(msg, 'success')}
+                    />
                 )}
                 {activeTab === Tab.Artifacts && (
                     <ArtifactEditor profile={profile} setProfile={setProfile} />
@@ -187,6 +230,37 @@ const App: React.FC = () => {
                         Confirm Exit
                     </button>
                 </div>
+            </div>
+        </div>
+      )}
+
+      {/* Notification Toast */}
+      {notification && (
+        <div className="fixed bottom-6 right-6 z-50 animate-in slide-in-from-bottom-5 fade-in duration-300">
+            <div className={`
+                flex items-center gap-4 px-5 py-4 rounded-xl border shadow-2xl backdrop-blur-md min-w-[320px]
+                ${notification.type === 'success' 
+                    ? 'bg-ror-panel/95 border-ror-green/30 shadow-ror-green/10' 
+                    : 'bg-ror-panel/95 border-red-500/30 shadow-red-500/10'}
+            `}>
+                <div className={`
+                    p-2 rounded-full flex-shrink-0
+                    ${notification.type === 'success' ? 'bg-ror-green/10 text-ror-green' : 'bg-red-500/10 text-red-500'}
+                `}>
+                    {notification.type === 'success' ? <CheckCircle size={24} /> : <AlertTriangle size={24} />}
+                </div>
+                <div className="flex-1">
+                    <h4 className={`font-bold text-sm ${notification.type === 'success' ? 'text-ror-green' : 'text-red-400'}`}>
+                        {notification.type === 'success' ? 'Operation Successful' : 'Error'}
+                    </h4>
+                    <p className="text-sm text-gray-300 leading-tight mt-0.5">{notification.message}</p>
+                </div>
+                <button 
+                    onClick={() => setNotification(null)}
+                    className="text-gray-500 hover:text-white transition-colors p-1"
+                >
+                    <X size={18} />
+                </button>
             </div>
         </div>
       )}

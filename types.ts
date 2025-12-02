@@ -4,6 +4,7 @@ export interface ParsedProfile {
   xmlContent: string;
   coins: number;
   unlockedAchievements: Set<string>;
+  unlockedItems: Set<string>;
 }
 
 export interface SurvivorDef {
@@ -22,7 +23,6 @@ export interface AchievementDef {
 }
 
 export enum Tab {
-  General = 'General',
   Survivors = 'Survivors',
   Artifacts = 'Artifacts',
   Achievements = 'Achievements',

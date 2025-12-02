@@ -22,16 +22,29 @@ export const parseProfile = (xmlString: string, fileName: string): ParsedProfile
   const achievementsNode = xmlDoc.getElementsByTagName("achievementsList")[0];
   const achievementString = achievementsNode ? (achievementsNode.textContent || "") : "";
   
-  // Fix: Split by any whitespace (space, tab, newline) to prevent clumping of IDs
-  // This is critical for files where achievements are separated by newlines
+  // Split by any whitespace (space, tab, newline) to prevent clumping of IDs
   const unlockedAchievements = new Set(achievementString.split(/\s+/).filter(s => s.trim().length > 0));
+
+  // Extract Unlocks from Stats
+  const unlockedItems = new Set<string>();
+  const statsNode = xmlDoc.getElementsByTagName("stats")[0];
+  if (statsNode) {
+    const unlockNodes = statsNode.getElementsByTagName("unlock");
+    for (let i = 0; i < unlockNodes.length; i++) {
+        const content = unlockNodes[i].textContent?.trim();
+        if (content) {
+            unlockedItems.add(content);
+        }
+    }
+  }
 
   return {
     fileName,
     displayName,
     xmlContent: xmlString,
     coins,
-    unlockedAchievements
+    unlockedAchievements,
+    unlockedItems
   };
 };
 
@@ -63,6 +76,25 @@ export const generateXML = (originalXml: string, profile: ParsedProfile): string
     newAchievements.textContent = achievementsStr;
     root.appendChild(newAchievements);
   }
+
+  // Update Stats / Unlocks
+  // We must preserve existing <stat> tags and only manage <unlock> tags.
+  let statsNode = xmlDoc.getElementsByTagName("stats")[0];
+  if (!statsNode) {
+      statsNode = xmlDoc.createElement("stats");
+      xmlDoc.documentElement.appendChild(statsNode);
+  }
+
+  // Remove all existing <unlock> tags to rebuild them cleanly
+  const existingUnlocks = Array.from(statsNode.getElementsByTagName("unlock"));
+  existingUnlocks.forEach(u => statsNode.removeChild(u));
+
+  // Append new <unlock> tags
+  profile.unlockedItems.forEach(item => {
+      const el = xmlDoc.createElement("unlock");
+      el.textContent = item;
+      statsNode.appendChild(el);
+  });
 
   const serializer = new XMLSerializer();
   return serializer.serializeToString(xmlDoc);
