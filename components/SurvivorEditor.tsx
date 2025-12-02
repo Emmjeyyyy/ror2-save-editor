@@ -24,6 +24,7 @@ const SurvivorIcon: React.FC<{ survivor: SurvivorDef, isUnlocked: boolean }> = (
             alt={survivor.name} 
             className="w-full h-full object-cover" 
             onError={() => setError(true)}
+            referrerPolicy="no-referrer"
         />
       ) : (
         <div className="text-xl font-bold text-ror-dark">

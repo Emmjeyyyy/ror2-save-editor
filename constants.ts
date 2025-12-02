@@ -1,24 +1,27 @@
+
 import { SurvivorDef, AchievementDef } from './types';
 
+// Using wiki.gg redirects to ensure images load without local file issues. 
+// If you prefer local images, replace strings with 'public/commando.webp' etc.
 export const SURVIVORS: SurvivorDef[] = [
-  { id: 'Commando', name: 'Commando', description: 'The reliable all-rounder.', requiredAchievement: '', iconUrl: '/characs/commando.webp' },
-  { id: 'Huntress', name: 'Huntress', description: 'High mobility glass cannon.', requiredAchievement: '', iconUrl: '/characs/huntress.webp' },
-  { id: 'Bandit2', name: 'Bandit', description: 'High damage backstabber.', requiredAchievement: 'CompleteThreeStages', iconUrl: '/characs/bandit.webp' },
-  { id: 'Toolbot', name: 'MUL-T', description: 'Versatile tank with dual equipment.', requiredAchievement: 'RepeatFirstTeleporter', iconUrl: '/characs/mult.webp' },
-  { id: 'Engi', name: 'Engineer', description: 'Static defense powerhouse.', requiredAchievement: 'Complete30StagesCareer', iconUrl: '/characs/engineer.webp' },
-  { id: 'Mage', name: 'Artificer', description: 'Burst damage mage.', requiredAchievement: 'FreeMage', iconUrl: '/characs/artificer.webp' },
-  { id: 'Merc', name: 'Mercenary', description: 'High skill melee assassin.', requiredAchievement: 'CompleteUnknownEnding', iconUrl: '/characs/mercenary.webp' },
-  { id: 'Treebot', name: 'REX', description: 'Health-sacrificing plant robot.', requiredAchievement: 'RescueTreebot', iconUrl: '/characs/rex.webp' },
-  { id: 'Loader', name: 'Loader', description: 'Heavy hitting grappler.', requiredAchievement: 'DefeatSuperRoboBallBoss', iconUrl: '/characs/loader.webp' },
-  { id: 'Croco', name: 'Acrid', description: 'Poison spreading beast.', requiredAchievement: 'BeatArena', iconUrl: '/characs/acrid.webp' },
-  { id: 'Captain', name: 'Captain', description: 'Commander of the UES Safe Travels.', requiredAchievement: 'CompleteMainEnding', iconUrl: '/characs/captain.webp' },
-  { id: 'Railgunner', name: 'Railgunner', description: 'Long-range sniper (SotV DLC).', requiredAchievement: '', iconUrl: '/characs/railgunner.webp' }, 
-  { id: 'VoidSurvivor', name: 'Void Fiend', description: 'Corrupted survivor (SotV DLC).', requiredAchievement: 'CompleteVoidEnding', iconUrl: '/characs/voidfiend.webp' },
-  { id: 'Seeker', name: 'Seeker', description: 'Soul-manipulating brawler (SotS DLC).', requiredAchievement: '', iconUrl: '/characs/seeker.webp' },
-  { id: 'Chef', name: 'Chef', description: 'Master of culinary combat (SotS DLC).', requiredAchievement: 'ActivateChef', iconUrl: '/characs/chef.webp' },
-  { id: 'FalseSon', name: 'The False Son', description: 'Herald of the path (SotS DLC).', requiredAchievement: 'UnlockFalseSon', iconUrl: '/characs/falseson.webp' },
-  { id: 'Drifter', name: 'Drifter', description: 'Scavenging brawler (Modded).', requiredAchievement: 'FreeDrifter', iconUrl: '/characs/drifter.webp' },
-  { id: 'DroneTech', name: 'Operator', description: 'Drone specialist (Modded).', requiredAchievement: '', iconUrl: '/characs/operator.webp' },
+  { id: 'Commando', name: 'Commando', description: 'The reliable all-rounder.', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Commando.png' },
+  { id: 'Huntress', name: 'Huntress', description: 'High mobility glass cannon.', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Huntress.png' },
+  { id: 'Bandit2', name: 'Bandit', description: 'High damage backstabber.', requiredAchievement: 'CompleteThreeStages', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Bandit.png' },
+  { id: 'Toolbot', name: 'MUL-T', description: 'Versatile tank with dual equipment.', requiredAchievement: 'RepeatFirstTeleporter', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/MUL-T.png' },
+  { id: 'Engi', name: 'Engineer', description: 'Static defense powerhouse.', requiredAchievement: 'Complete30StagesCareer', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Engineer.png' },
+  { id: 'Mage', name: 'Artificer', description: 'Burst damage mage.', requiredAchievement: 'FreeMage', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artificer.png' },
+  { id: 'Merc', name: 'Mercenary', description: 'High skill melee assassin.', requiredAchievement: 'CompleteUnknownEnding', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Mercenary.png' },
+  { id: 'Treebot', name: 'REX', description: 'Health-sacrificing plant robot.', requiredAchievement: 'RescueTreebot', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/REX.png' },
+  { id: 'Loader', name: 'Loader', description: 'Heavy hitting grappler.', requiredAchievement: 'DefeatSuperRoboBallBoss', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Loader.png' },
+  { id: 'Croco', name: 'Acrid', description: 'Poison spreading beast.', requiredAchievement: 'BeatArena', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Acrid.png' },
+  { id: 'Captain', name: 'Captain', description: 'Commander of the UES Safe Travels.', requiredAchievement: 'CompleteMainEnding', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Captain.png' },
+  { id: 'Railgunner', name: 'Railgunner', description: 'Long-range sniper (SotV DLC).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Railgunner.png' }, 
+  { id: 'VoidSurvivor', name: 'Void Fiend', description: 'Corrupted survivor (SotV DLC).', requiredAchievement: 'CompleteVoidEnding', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Void_Fiend.png' },
+  { id: 'Seeker', name: 'Seeker', description: 'Soul-manipulating brawler (SotS DLC).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Seeker.png' },
+  { id: 'Chef', name: 'Chef', description: 'Master of culinary combat (SotS DLC).', requiredAchievement: 'ActivateChef', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Chef.png' },
+  { id: 'FalseSon', name: 'The False Son', description: 'Herald of the path (SotS DLC).', requiredAchievement: 'UnlockFalseSon', iconUrl: 'https://riskofrain2.wiki.gg/images/False_Son.png' },
+  { id: 'Drifter', name: 'Drifter', description: 'Scavenging brawler (Modded).', requiredAchievement: 'FreeDrifter', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Drifter.png/120px-Drifter.png' },
+  { id: 'DroneTech', name: 'Operator', description: 'Drone specialist (Modded).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Operator.png/120px-Operator.png' },
 ];
 
 export const ACHIEVEMENTS: AchievementDef[] = [
