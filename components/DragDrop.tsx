@@ -88,7 +88,7 @@ const DragDrop: React.FC<DragDropProps> = ({ onFileLoaded }) => {
             </p>
           </div>
           <div className="text-xs text-slate-600 bg-black/20 px-3 py-1 rounded">
-             C:\Users\Public\Documents\OnlineFix\632360\Saves\UserProfiles
+              C:\Program Files(x86)\Steam\userdata\[Number]\632360\remote\UserProfiles
           </div>
         </div>
       </div>

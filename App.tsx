@@ -75,7 +75,7 @@ const App: React.FC = () => {
             </div>
 
              <footer className="mt-20 text-gray-600 text-sm">
-                Runs locally in your browser. No data is uploaded.
+                Runs right in your browser. We don’t touch your data, we swear.
             </footer>
         </main>
         
