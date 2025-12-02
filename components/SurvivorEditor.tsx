@@ -16,7 +16,7 @@ const SurvivorIcon: React.FC<{ survivor: SurvivorDef, isUnlocked: boolean }> = (
     <div className={`
         w-12 h-12 rounded-lg shadow-lg overflow-hidden shrink-0 flex items-center justify-center
         ${isUnlocked ? 'ring-1 ring-ror-accent/50' : 'grayscale opacity-50 ring-1 ring-white/10'}
-        ${error ? 'bg-white/10' : ''}
+        ${error ? 'bg-ror-accent' : 'bg-black/20'}
     `}>
       {!error ? (
         <img 
@@ -26,7 +26,7 @@ const SurvivorIcon: React.FC<{ survivor: SurvivorDef, isUnlocked: boolean }> = (
             onError={() => setError(true)}
         />
       ) : (
-        <div className={`text-xl font-bold ${isUnlocked ? 'text-ror-blue' : 'text-gray-600'}`}>
+        <div className="text-xl font-bold text-ror-dark">
             {survivor.name.charAt(0)}
         </div>
       )}
