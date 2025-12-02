@@ -3,9 +3,11 @@ import DragDrop from './components/DragDrop';
 import SurvivorEditor from './components/SurvivorEditor';
 import ArtifactEditor from './components/ArtifactEditor';
 import AchievementEditor from './components/AchievementEditor';
+import Sidebar from './components/Sidebar';
+import Notification from './components/Notification';
 import { ParsedProfile, Tab } from './types';
 import { parseProfile, generateXML, downloadProfile } from './services/profileService';
-import { CloudRain, Users, Trophy, AlertTriangle, Download, X, User as UserIcon, Hexagon, CheckCircle } from 'lucide-react';
+import { CloudRain, AlertTriangle } from 'lucide-react';
 
 const App: React.FC = () => {
   const [profile, setProfile] = useState<ParsedProfile | null>(null);
@@ -48,6 +50,25 @@ const App: React.FC = () => {
     setShowExitConfirm(false);
   };
 
+  const renderContent = () => {
+    if (activeTab === Tab.Survivors && profile) {
+      return (
+        <SurvivorEditor 
+          profile={profile} 
+          setProfile={setProfile} 
+          onShowNotification={(msg) => showNotification(msg, 'success')}
+        />
+      );
+    }
+    if (activeTab === Tab.Artifacts && profile) {
+      return <ArtifactEditor profile={profile} setProfile={setProfile} />;
+    }
+    if (activeTab === Tab.Achievements && profile) {
+      return <AchievementEditor profile={profile} setProfile={setProfile} />;
+    }
+    return null;
+  };
+
   if (!profile) {
     return (
       <div className="min-h-screen bg-black flex flex-col font-sans text-gray-200">
@@ -79,35 +100,12 @@ const App: React.FC = () => {
             </footer>
         </main>
         
-        {/* Notification Toast for Load Error */}
         {notification && (
-            <div className="fixed bottom-6 right-6 z-50 animate-in slide-in-from-bottom-5 fade-in duration-300">
-                <div className={`
-                    flex items-center gap-4 px-5 py-4 rounded-xl border shadow-2xl backdrop-blur-md min-w-[320px]
-                    ${notification.type === 'success' 
-                        ? 'bg-ror-panel/95 border-ror-green/30 shadow-ror-green/10' 
-                        : 'bg-ror-panel/95 border-red-500/30 shadow-red-500/10'}
-                `}>
-                    <div className={`
-                        p-2 rounded-full flex-shrink-0
-                        ${notification.type === 'success' ? 'bg-ror-green/10 text-ror-green' : 'bg-red-500/10 text-red-500'}
-                    `}>
-                        {notification.type === 'success' ? <CheckCircle size={24} /> : <AlertTriangle size={24} />}
-                    </div>
-                    <div className="flex-1">
-                        <h4 className={`font-bold text-sm ${notification.type === 'success' ? 'text-ror-green' : 'text-red-400'}`}>
-                            {notification.type === 'success' ? 'Operation Successful' : 'Error'}
-                        </h4>
-                        <p className="text-sm text-gray-300 leading-tight mt-0.5">{notification.message}</p>
-                    </div>
-                    <button 
-                        onClick={() => setNotification(null)}
-                        className="text-gray-500 hover:text-white transition-colors p-1"
-                    >
-                        <X size={18} />
-                    </button>
-                </div>
-            </div>
+            <Notification 
+                message={notification.message} 
+                type={notification.type} 
+                onClose={() => setNotification(null)} 
+            />
         )}
       </div>
     );
@@ -115,63 +113,13 @@ const App: React.FC = () => {
 
   return (
     <div className="h-screen bg-black text-gray-200 flex flex-col md:flex-row overflow-hidden font-sans">
-      {/* Sidebar Navigation */}
-      <aside className="w-full md:w-64 bg-ror-panel border-r border-white/10 flex-shrink-0 flex flex-col z-20">
-        <div className="p-6 border-b border-white/10 flex items-center gap-3">
-           <CloudRain className="text-ror-accent" size={24} />
-           <span className="font-bold text-lg text-white">Save Editor</span>
-        </div>
-        
-        <nav className="flex-1 p-3 space-y-1 overflow-hidden">
-            {[
-                { id: Tab.Survivors, icon: Users, label: 'Survivors' },
-                { id: Tab.Artifacts, icon: Hexagon, label: 'Artifacts' },
-                { id: Tab.Achievements, icon: Trophy, label: 'Achievements' },
-            ].map((item) => (
-                <button
-                    key={item.id}
-                    onClick={() => setActiveTab(item.id)}
-                    className={`
-                        w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200
-                        ${activeTab === item.id 
-                            ? 'bg-ror-accent text-black font-bold' 
-                            : 'text-gray-400 hover:bg-white/5 hover:text-white'}
-                    `}
-                >
-                    <item.icon size={20} />
-                    <span className="text-sm font-medium">{item.label}</span>
-                </button>
-            ))}
-        </nav>
-
-        <div className="p-4 border-t border-white/10 bg-black/20 mt-auto">
-             <div className="flex items-center gap-3 mb-4">
-                 <div className="p-2 bg-gray-800 rounded-full">
-                    <UserIcon size={16} className="text-gray-400" />
-                 </div>
-                 <div className="overflow-hidden">
-                     <div className="text-sm font-bold text-white truncate" title={profile.displayName}>{profile.displayName}</div>
-                     <div className="text-xs truncate text-gray-500" title={profile.fileName}>{profile.fileName}</div>
-                 </div>
-             </div>
-             
-             <div className="flex gap-2">
-                 <button 
-                    onClick={() => setShowExitConfirm(true)}
-                    className="flex-1 flex items-center justify-center p-2 bg-red-500/10 text-red-400 border border-red-500/20 hover:bg-red-500 hover:text-white rounded-lg transition-all"
-                    title="Close File"
-                 >
-                     <X size={18} />
-                 </button>
-                 <button 
-                    onClick={handleSave}
-                    className="flex-[3] flex items-center justify-center gap-2 p-2 bg-ror-blue text-black font-bold hover:bg-blue-300 rounded-lg transition-all"
-                 >
-                     <Download size={18} /> Save
-                 </button>
-             </div>
-        </div>
-      </aside>
+      <Sidebar 
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        profile={profile}
+        onSave={handleSave}
+        onRequestExit={() => setShowExitConfirm(true)}
+      />
 
       {/* Main Content Area */}
       <main className="flex-1 overflow-y-auto relative bg-[#121212] p-2 md:p-0">
@@ -186,19 +134,7 @@ const App: React.FC = () => {
             </header>
 
             <div>
-                {activeTab === Tab.Survivors && (
-                    <SurvivorEditor 
-                      profile={profile} 
-                      setProfile={setProfile} 
-                      onShowNotification={(msg) => showNotification(msg, 'success')}
-                    />
-                )}
-                {activeTab === Tab.Artifacts && (
-                    <ArtifactEditor profile={profile} setProfile={setProfile} />
-                )}
-                {activeTab === Tab.Achievements && (
-                    <AchievementEditor profile={profile} setProfile={setProfile} />
-                )}
+                {renderContent()}
             </div>
         </div>
       </main>
@@ -234,35 +170,12 @@ const App: React.FC = () => {
         </div>
       )}
 
-      {/* Notification Toast */}
       {notification && (
-        <div className="fixed bottom-6 right-6 z-50 animate-in slide-in-from-bottom-5 fade-in duration-300">
-            <div className={`
-                flex items-center gap-4 px-5 py-4 rounded-xl border shadow-2xl backdrop-blur-md min-w-[320px]
-                ${notification.type === 'success' 
-                    ? 'bg-ror-panel/95 border-ror-green/30 shadow-ror-green/10' 
-                    : 'bg-ror-panel/95 border-red-500/30 shadow-red-500/10'}
-            `}>
-                <div className={`
-                    p-2 rounded-full flex-shrink-0
-                    ${notification.type === 'success' ? 'bg-ror-green/10 text-ror-green' : 'bg-red-500/10 text-red-500'}
-                `}>
-                    {notification.type === 'success' ? <CheckCircle size={24} /> : <AlertTriangle size={24} />}
-                </div>
-                <div className="flex-1">
-                    <h4 className={`font-bold text-sm ${notification.type === 'success' ? 'text-ror-green' : 'text-red-400'}`}>
-                        {notification.type === 'success' ? 'Operation Successful' : 'Error'}
-                    </h4>
-                    <p className="text-sm text-gray-300 leading-tight mt-0.5">{notification.message}</p>
-                </div>
-                <button 
-                    onClick={() => setNotification(null)}
-                    className="text-gray-500 hover:text-white transition-colors p-1"
-                >
-                    <X size={18} />
-                </button>
-            </div>
-        </div>
+        <Notification 
+            message={notification.message} 
+            type={notification.type} 
+            onClose={() => setNotification(null)} 
+        />
       )}
     </div>
   );
