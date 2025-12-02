@@ -18,33 +18,32 @@ const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, on
   };
 
   const handleUnlockAll = () => {
-    // 1. Create clones of existing sets to modify
-    const newAchievementsSet = new Set(profile.unlockedAchievements);
-    const newUnlocksSet = new Set(profile.unlockedItems);
-
-    // 2. Add all raw achievement IDs (legacy & comprehensive list)
-    ALL_ACHIEVEMENTS_LIST.forEach(id => newAchievementsSet.add(id));
-
-    // 3. Add all structured achievement IDs (Items, Skills, Skins, Artifacts)
-    ACHIEVEMENTS.forEach(a => newAchievementsSet.add(a.id));
-
-    // 4. Explicitly ensure all Survivor requirements are met (Characters & their tokens)
-    SURVIVORS.forEach(s => {
-        // Unlock the achievement required to see the character
-        if (s.requiredAchievement) {
-            newAchievementsSet.add(s.requiredAchievement);
-        }
-        // Unlock the specific character token for gameplay availability (Characters.Commando, etc)
-        // This is critical for the character to be selectable
-        newUnlocksSet.add(`Characters.${s.id}`);
-    });
-
-    // 5. Add all generic unlock tokens (Items, Equipment, Artifacts, etc)
-    ALL_UNLOCKS.forEach(u => newUnlocksSet.add(u));
-
-    // 6. Update State Atomically
     setProfile(prev => {
         if (!prev) return null;
+
+        // 1. Create clones of existing sets to modify based on PREVIOUS state
+        const newAchievementsSet = new Set(prev.unlockedAchievements);
+        const newUnlocksSet = new Set(prev.unlockedItems);
+
+        // 2. Add all raw achievement IDs (legacy & comprehensive list)
+        ALL_ACHIEVEMENTS_LIST.forEach(id => newAchievementsSet.add(id));
+
+        // 3. Add all structured achievement IDs (Items, Skills, Skins, Artifacts)
+        ACHIEVEMENTS.forEach(a => newAchievementsSet.add(a.id));
+
+        // 4. Explicitly ensure all Survivor requirements are met (Characters & their tokens)
+        SURVIVORS.forEach(s => {
+            // Unlock the achievement required to see the character
+            if (s.requiredAchievement) {
+                newAchievementsSet.add(s.requiredAchievement);
+            }
+            // Unlock the specific character token for gameplay availability
+            newUnlocksSet.add(`Characters.${s.id}`);
+        });
+
+        // 5. Add all generic unlock tokens (Items, Equipment, Artifacts, etc)
+        ALL_UNLOCKS.forEach(u => newUnlocksSet.add(u));
+
         return { 
             ...prev, 
             unlockedAchievements: newAchievementsSet, 
@@ -52,7 +51,7 @@ const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, on
         };
     });
     
-    console.log("Unlock All executed. Items count:", newUnlocksSet.size);
+    console.log("Unlock All executed.");
     onShowNotification("Success! All items, survivors, and artifacts unlocked.");
   };
 

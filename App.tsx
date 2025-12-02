@@ -51,22 +51,24 @@ const App: React.FC = () => {
   };
 
   const renderContent = () => {
-    if (activeTab === Tab.Survivors && profile) {
-      return (
-        <SurvivorEditor 
-          profile={profile} 
-          setProfile={setProfile} 
-          onShowNotification={(msg) => showNotification(msg, 'success')}
-        />
-      );
+    if (!profile) return null;
+
+    switch (activeTab) {
+      case Tab.Survivors:
+        return (
+          <SurvivorEditor 
+            profile={profile} 
+            setProfile={setProfile} 
+            onShowNotification={(msg) => showNotification(msg, 'success')}
+          />
+        );
+      case Tab.Artifacts:
+        return <ArtifactEditor profile={profile} setProfile={setProfile} />;
+      case Tab.Achievements:
+        return <AchievementEditor profile={profile} setProfile={setProfile} />;
+      default:
+        return null;
     }
-    if (activeTab === Tab.Artifacts && profile) {
-      return <ArtifactEditor profile={profile} setProfile={setProfile} />;
-    }
-    if (activeTab === Tab.Achievements && profile) {
-      return <AchievementEditor profile={profile} setProfile={setProfile} />;
-    }
-    return null;
   };
 
   if (!profile) {
