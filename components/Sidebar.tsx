@@ -1,6 +1,7 @@
 import React from 'react';
 import { ParsedProfile, Tab } from '../types';
-import { CloudRain, Users, Hexagon, Trophy, User as UserIcon, X, Download } from 'lucide-react';
+import { Users, Hexagon, Trophy, User as UserIcon, X, Download } from 'lucide-react';
+import Syringe from './Syringe';
 
 interface SidebarProps {
   activeTab: Tab;
@@ -20,7 +21,9 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, profile, onS
   return (
     <aside className="w-full md:w-64 bg-ror-panel border-r border-white/10 flex-shrink-0 flex flex-col z-20">
       <div className="p-6 border-b border-white/10 flex items-center gap-3">
-         <CloudRain className="text-ror-accent" size={24} />
+         <div className="text-ror-accent">
+            <Syringe size={24} />
+         </div>
          <span className="font-bold text-lg text-white">Save Editor</span>
       </div>
       

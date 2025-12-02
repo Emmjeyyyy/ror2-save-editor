@@ -5,9 +5,10 @@ import ArtifactEditor from './components/ArtifactEditor';
 import AchievementEditor from './components/AchievementEditor';
 import Sidebar from './components/Sidebar';
 import Notification from './components/Notification';
+import Syringe from './components/Syringe';
 import { ParsedProfile, Tab } from './types';
 import { parseProfile, generateXML, downloadProfile } from './services/profileService';
-import { CloudRain, AlertTriangle } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 const App: React.FC = () => {
   const [profile, setProfile] = useState<ParsedProfile | null>(null);
@@ -77,7 +78,7 @@ const App: React.FC = () => {
         <header className="py-6 border-b border-white/10 bg-ror-panel">
             <div className="container mx-auto px-6 flex items-center gap-3">
                 <div className="bg-ror-accent/10 p-2 rounded-lg text-ror-accent">
-                    <CloudRain size={24} />
+                    <Syringe size={24} />
                 </div>
                 <h1 className="text-2xl font-bold text-white tracking-tight">RoR2 <span className="text-ror-accent">Save Editor</span></h1>
             </div>

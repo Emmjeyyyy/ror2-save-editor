@@ -76,7 +76,7 @@ const DragDrop: React.FC<DragDropProps> = ({ onFileLoaded }) => {
         />
         
         <div className="flex flex-col items-center gap-4 text-center">
-          <div className={`p-4 rounded-full ${isDragging ? 'bg-ror-accent text-white' : 'bg-slate-800 text-ror-accent'}`}>
+          <div className={`p-4 rounded-full ${isDragging ? 'bg-ror-accent text-black' : 'bg-slate-800 text-ror-accent'}`}>
             {isDragging ? <FileText size={40} /> : <Upload size={40} />}
           </div>
           <div>
