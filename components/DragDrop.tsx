@@ -55,7 +55,7 @@ const DragDrop: React.FC<DragDropProps> = ({ onFileLoaded }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full max-w-2xl mx-auto mt-10 p-6">
+    <div className="flex flex-col items-center justify-center w-full max-w-2xl mx-auto mt-1 p-6">
        <div
         className={`w-full flex flex-col items-center justify-center h-64 border-2 border-dashed rounded-xl cursor-pointer transition-all duration-300
           ${isDragging 
