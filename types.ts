@@ -1,4 +1,5 @@
 
+
 export interface ParsedProfile {
   fileName: string;
   displayName: string;
@@ -21,6 +22,7 @@ export interface AchievementDef {
   name: string;
   description: string;
   category: 'Survivor' | 'Item' | 'Artifact' | 'Skill' | 'Skin' | 'Skin Unlock' | 'Challenge';
+  iconUrl?: string;
 }
 
 export enum Tab {

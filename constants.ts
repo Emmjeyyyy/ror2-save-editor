@@ -1,4 +1,5 @@
 
+
 import { SurvivorDef, AchievementDef } from './types';
 
 // Using wiki.gg redirects to ensure images load without local file issues. 
@@ -20,8 +21,8 @@ export const SURVIVORS: SurvivorDef[] = [
   { id: 'Seeker', name: 'Seeker', description: 'Soul-manipulating brawler (SotS DLC).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Seeker.png' },
   { id: 'Chef', name: 'Chef', description: 'Master of culinary combat (SotS DLC).', requiredAchievement: 'ActivateChef', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Chef.png' },
   { id: 'FalseSon', name: 'The False Son', description: 'Herald of the path (SotS DLC).', requiredAchievement: 'UnlockFalseSon', iconUrl: 'https://riskofrain2.wiki.gg/images/False_Son.png' },
-  { id: 'Drifter', name: 'Drifter', description: 'Scavenging brawler (Modded).', requiredAchievement: 'FreeDrifter', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Drifter.png/120px-Drifter.png' },
-  { id: 'DroneTech', name: 'Operator', description: 'Drone specialist (Modded).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Operator.png/120px-Operator.png' },
+  { id: 'Drifter', name: 'Drifter', description: 'Scavenging brawler (Modded).', requiredAchievement: 'FreeDrifter', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Drifter.png/120px-Drifter.png?76c399' },
+  { id: 'DroneTech', name: 'Operator', description: 'Drone specialist (Modded).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Operator.png/120px-Operator.png?27bdc6' },
 ];
 
 export const ACHIEVEMENTS: AchievementDef[] = [
@@ -226,26 +227,26 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'DroneTechClearGameMonsoon', name: 'Operator Mastery Skin', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock' },
 
   // Artifacts
-  { id: 'ObtainArtifactBomb', name: 'Trial of Spite', description: 'Complete the Trial of Spite.', category: 'Artifact' },
-  { id: 'ObtainArtifactCommand', name: 'Trial of Command', description: 'Complete the Trial of Command.', category: 'Artifact' },
-  { id: 'ObtainArtifactDelusion', name: 'Trial of Delusion', description: 'Complete the Trial of Delusion.', category: 'Artifact' },
-  { id: 'ObtainArtifactDevotion', name: 'Trial of Devotion', description: 'Complete the Trial of Devotion.', category: 'Artifact' },
-  { id: 'ObtainArtifactEliteOnly', name: 'Trial of Honor', description: 'Complete the Trial of Honor.', category: 'Artifact' },
-  { id: 'ObtainArtifactEnigma', name: 'Trial of Enigma', description: 'Complete the Trial of Enigma.', category: 'Artifact' },
-  { id: 'ObtainArtifactFriendlyFire', name: 'Trial of Chaos', description: 'Complete the Trial of Chaos.', category: 'Artifact' },
-  { id: 'ObtainArtifactGlass', name: 'Trial of Glass', description: 'Complete the Trial of Glass.', category: 'Artifact' },
-  { id: 'ObtainArtifactMixEnemy', name: 'Trial of Dissonance', description: 'Complete the Trial of Dissonance.', category: 'Artifact' },
-  { id: 'ObtainArtifactMonsterTeamGainsItems', name: 'Trial of Evolution', description: 'Complete the Trial of Evolution.', category: 'Artifact' },
-  { id: 'ObtainArtifactRandomSurvivorOnRespawn', name: 'Trial of Metamorphosis', description: 'Complete the Trial of Metamorphosis.', category: 'Artifact' },
-  { id: 'ObtainArtifactSacrifice', name: 'Trial of Sacrifice', description: 'Complete the Trial of Sacrifice.', category: 'Artifact' },
-  { id: 'ObtainArtifactShadowClone', name: 'Trial of Vengeance', description: 'Complete the Trial of Vengeance.', category: 'Artifact' },
-  { id: 'ObtainArtifactSingleMonsterType', name: 'Trial of Kin', description: 'Complete the Trial of Kin.', category: 'Artifact' },
-  { id: 'ObtainArtifactSwarms', name: 'Trial of Swarms', description: 'Complete the Trial of Swarms.', category: 'Artifact' },
-  { id: 'ObtainArtifactTeamDeath', name: 'Trial of Death', description: 'Complete the Trial of Death.', category: 'Artifact' },
-  { id: 'ObtainArtifactWeakAssKnees', name: 'Trial of Frailty', description: 'Complete the Trial of Frailty.', category: 'Artifact' },
-  { id: 'ObtainArtifactWispOnDeath', name: 'Trial of Soul', description: 'Complete the Trial of Soul.', category: 'Artifact' },
-  { id: 'ObtainArtifactRebirth', name: 'Experienced Rebirth', description: 'Gain the power of another life by offering to the Shrine of Rebirth.', category: 'Artifact' },
-  { id: 'ObtainArtifactPrestige', name: 'Trial of Prestige', description: 'Complete the Trial of Prestige.', category: 'Artifact' },
+  { id: 'ObtainArtifactBomb', name: 'Trial of Spite', description: 'Complete the Trial of Spite.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Spite.png' },
+  { id: 'ObtainArtifactCommand', name: 'Trial of Command', description: 'Complete the Trial of Command.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Command.png' },
+  { id: 'ObtainArtifactDelusion', name: 'Trial of Delusion', description: 'Complete the Trial of Delusion.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Delusion.png' },
+  { id: 'ObtainArtifactDevotion', name: 'Trial of Devotion', description: 'Complete the Trial of Devotion.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Devotion.png' },
+  { id: 'ObtainArtifactEliteOnly', name: 'Trial of Honor', description: 'Complete the Trial of Honor.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Honor.png' },
+  { id: 'ObtainArtifactEnigma', name: 'Trial of Enigma', description: 'Complete the Trial of Enigma.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Enigma.png' },
+  { id: 'ObtainArtifactFriendlyFire', name: 'Trial of Chaos', description: 'Complete the Trial of Chaos.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Chaos.png' },
+  { id: 'ObtainArtifactGlass', name: 'Trial of Glass', description: 'Complete the Trial of Glass.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Glass.png' },
+  { id: 'ObtainArtifactMixEnemy', name: 'Trial of Dissonance', description: 'Complete the Trial of Dissonance.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Dissonance.png' },
+  { id: 'ObtainArtifactMonsterTeamGainsItems', name: 'Trial of Evolution', description: 'Complete the Trial of Evolution.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Evolution.png' },
+  { id: 'ObtainArtifactRandomSurvivorOnRespawn', name: 'Trial of Metamorphosis', description: 'Complete the Trial of Metamorphosis.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Metamorphosis.png' },
+  { id: 'ObtainArtifactSacrifice', name: 'Trial of Sacrifice', description: 'Complete the Trial of Sacrifice.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Sacrifice.png' },
+  { id: 'ObtainArtifactShadowClone', name: 'Trial of Vengeance', description: 'Complete the Trial of Vengeance.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Vengeance.png' },
+  { id: 'ObtainArtifactSingleMonsterType', name: 'Trial of Kin', description: 'Complete the Trial of Kin.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Kin.png' },
+  { id: 'ObtainArtifactSwarms', name: 'Trial of Swarms', description: 'Complete the Trial of Swarms.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Swarms.png' },
+  { id: 'ObtainArtifactTeamDeath', name: 'Trial of Death', description: 'Complete the Trial of Death.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Death.png' },
+  { id: 'ObtainArtifactWeakAssKnees', name: 'Trial of Frailty', description: 'Complete the Trial of Frailty.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Frailty.png' },
+  { id: 'ObtainArtifactWispOnDeath', name: 'Trial of Soul', description: 'Complete the Trial of Soul.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Soul.png' },
+  { id: 'ObtainArtifactRebirth', name: 'Experienced Rebirth', description: 'Gain the power of another life by offering to the Shrine of Rebirth.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Rebirth.png' },
+  { id: 'ObtainArtifactPrestige', name: 'Trial of Prestige', description: 'Complete the Trial of Prestige.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Artifact_of_Prestige.png' },
 ];
 
 // Comprehensive list extracted from user XML for "Unlock All" functionality.
