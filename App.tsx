@@ -63,7 +63,7 @@ const App: React.FC = () => {
         <main className="flex-1 flex flex-col items-center justify-center p-6">
             <div className="text-center mb-10">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                    Modify Your Run
+                    Modify Your Save Profile
                 </h2>
                 <p className="text-gray-400 max-w-lg mx-auto text-lg">
                     Unlock survivors, edit lunar coins, and manage artifacts for Risk of Rain 2.
