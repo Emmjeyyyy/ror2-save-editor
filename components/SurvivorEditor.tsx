@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ParsedProfile, SurvivorDef } from '../types';
 import { SURVIVORS, ACHIEVEMENTS, ALL_ACHIEVEMENTS_LIST, ALL_UNLOCKS } from '../constants';
-import { Lock, Unlock, ChevronDown, ChevronUp, Zap, Palette, CheckSquare, Square, Coins, Skull } from 'lucide-react';
+import { Lock, Unlock, ChevronDown, ChevronUp, Zap, Palette, CheckSquare, Square, Skull } from 'lucide-react';
 
 interface SurvivorEditorProps {
   profile: ParsedProfile;
@@ -146,7 +146,11 @@ const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, on
         {/* Currency Box */}
         <div className="bg-ror-panel border border-white/5 rounded-xl p-6 shadow-lg">
           <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-              <Coins className="text-ror-accent" size={24} />
+              <img 
+                src="https://riskofrain2.wiki.gg/images/thumb/LunarCoin.png/23px-LunarCoin.png?726607" 
+                alt="Lunar Coin" 
+                className="w-6 h-6 object-contain"
+              />
               Lunar Coins
           </h2>
           
