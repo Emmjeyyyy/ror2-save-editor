@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ParsedProfile } from '../types';
+import { ParsedProfile, SurvivorDef } from '../types';
 import { SURVIVORS, ACHIEVEMENTS, ALL_ACHIEVEMENTS_LIST, ALL_UNLOCKS } from '../constants';
 import { Lock, Unlock, ChevronDown, ChevronUp, Zap, Palette, CheckSquare, Square, Coins, Skull } from 'lucide-react';
 
@@ -8,6 +8,31 @@ interface SurvivorEditorProps {
   setProfile: React.Dispatch<React.SetStateAction<ParsedProfile | null>>;
   onShowNotification: (message: string) => void;
 }
+
+const SurvivorIcon: React.FC<{ survivor: SurvivorDef, isUnlocked: boolean }> = ({ survivor, isUnlocked }) => {
+  const [error, setError] = useState(false);
+
+  return (
+    <div className={`
+        w-12 h-12 rounded-lg shadow-lg overflow-hidden shrink-0 flex items-center justify-center
+        ${isUnlocked ? 'ring-1 ring-ror-accent/50' : 'grayscale opacity-50 ring-1 ring-white/10'}
+        ${error ? 'bg-white/10' : ''}
+    `}>
+      {!error ? (
+        <img 
+            src={survivor.iconUrl} 
+            alt={survivor.name} 
+            className="w-full h-full object-cover" 
+            onError={() => setError(true)}
+        />
+      ) : (
+        <div className={`text-xl font-bold ${isUnlocked ? 'text-ror-blue' : 'text-gray-600'}`}>
+            {survivor.name.charAt(0)}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, onShowNotification }) => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
@@ -202,12 +227,7 @@ const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, on
               >
                   <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-3">
-                      <div className={`
-                          w-12 h-12 flex items-center justify-center rounded-lg text-xl font-bold shadow-lg
-                          ${isSurvivorUnlocked ? 'bg-ror-accent text-black' : 'bg-gray-800 text-gray-500'}
-                      `}>
-                          {survivor.name.charAt(0)}
-                      </div>
+                      <SurvivorIcon survivor={survivor} isUnlocked={isSurvivorUnlocked} />
                       <div>
                           <h3 className={`font-bold text-lg ${isSurvivorUnlocked ? 'text-white' : 'text-gray-400'}`}>{survivor.name}</h3>
                           <div className="flex items-center gap-2">

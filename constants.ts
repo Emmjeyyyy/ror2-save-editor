@@ -1,25 +1,24 @@
-
 import { SurvivorDef, AchievementDef } from './types';
 
 export const SURVIVORS: SurvivorDef[] = [
-  { id: 'Commando', name: 'Commando', description: 'The reliable all-rounder.', requiredAchievement: '' },
-  { id: 'Huntress', name: 'Huntress', description: 'High mobility glass cannon.', requiredAchievement: '' },
-  { id: 'Bandit2', name: 'Bandit', description: 'High damage backstabber.', requiredAchievement: 'CompleteThreeStages' },
-  { id: 'Toolbot', name: 'MUL-T', description: 'Versatile tank with dual equipment.', requiredAchievement: 'RepeatFirstTeleporter' },
-  { id: 'Engi', name: 'Engineer', description: 'Static defense powerhouse.', requiredAchievement: 'Complete30StagesCareer' },
-  { id: 'Mage', name: 'Artificer', description: 'Burst damage mage.', requiredAchievement: 'FreeMage' },
-  { id: 'Merc', name: 'Mercenary', description: 'High skill melee assassin.', requiredAchievement: 'CompleteUnknownEnding' },
-  { id: 'Treebot', name: 'REX', description: 'Health-sacrificing plant robot.', requiredAchievement: 'RescueTreebot' },
-  { id: 'Loader', name: 'Loader', description: 'Heavy hitting grappler.', requiredAchievement: 'DefeatSuperRoboBallBoss' },
-  { id: 'Croco', name: 'Acrid', description: 'Poison spreading beast.', requiredAchievement: 'BeatArena' },
-  { id: 'Captain', name: 'Captain', description: 'Commander of the UES Safe Travels.', requiredAchievement: 'CompleteMainEnding' },
-  { id: 'Railgunner', name: 'Railgunner', description: 'Long-range sniper (SotV DLC).', requiredAchievement: '' }, 
-  { id: 'VoidSurvivor', name: 'Void Fiend', description: 'Corrupted survivor (SotV DLC).', requiredAchievement: 'CompleteVoidEnding' },
-  { id: 'Seeker', name: 'Seeker', description: 'Soul-manipulating brawler (SotS DLC).', requiredAchievement: '' },
-  { id: 'Chef', name: 'Chef', description: 'Master of culinary combat (SotS DLC).', requiredAchievement: 'ActivateChef' },
-  { id: 'FalseSon', name: 'The False Son', description: 'Herald of the path (SotS DLC).', requiredAchievement: 'UnlockFalseSon' },
-  { id: 'Drifter', name: 'Drifter', description: 'Scavenging brawler (Modded).', requiredAchievement: 'FreeDrifter' },
-  { id: 'DroneTech', name: 'Operator', description: 'Drone specialist (Modded).', requiredAchievement: '' },
+  { id: 'Commando', name: 'Commando', description: 'The reliable all-rounder.', requiredAchievement: '', iconUrl: '/characs/commando.webp' },
+  { id: 'Huntress', name: 'Huntress', description: 'High mobility glass cannon.', requiredAchievement: '', iconUrl: '/characs/huntress.webp' },
+  { id: 'Bandit2', name: 'Bandit', description: 'High damage backstabber.', requiredAchievement: 'CompleteThreeStages', iconUrl: '/characs/bandit.webp' },
+  { id: 'Toolbot', name: 'MUL-T', description: 'Versatile tank with dual equipment.', requiredAchievement: 'RepeatFirstTeleporter', iconUrl: '/characs/mult.webp' },
+  { id: 'Engi', name: 'Engineer', description: 'Static defense powerhouse.', requiredAchievement: 'Complete30StagesCareer', iconUrl: '/characs/engineer.webp' },
+  { id: 'Mage', name: 'Artificer', description: 'Burst damage mage.', requiredAchievement: 'FreeMage', iconUrl: '/characs/artificer.webp' },
+  { id: 'Merc', name: 'Mercenary', description: 'High skill melee assassin.', requiredAchievement: 'CompleteUnknownEnding', iconUrl: '/characs/mercenary.webp' },
+  { id: 'Treebot', name: 'REX', description: 'Health-sacrificing plant robot.', requiredAchievement: 'RescueTreebot', iconUrl: '/characs/rex.webp' },
+  { id: 'Loader', name: 'Loader', description: 'Heavy hitting grappler.', requiredAchievement: 'DefeatSuperRoboBallBoss', iconUrl: '/characs/loader.webp' },
+  { id: 'Croco', name: 'Acrid', description: 'Poison spreading beast.', requiredAchievement: 'BeatArena', iconUrl: '/characs/acrid.webp' },
+  { id: 'Captain', name: 'Captain', description: 'Commander of the UES Safe Travels.', requiredAchievement: 'CompleteMainEnding', iconUrl: '/characs/captain.webp' },
+  { id: 'Railgunner', name: 'Railgunner', description: 'Long-range sniper (SotV DLC).', requiredAchievement: '', iconUrl: '/characs/railgunner.webp' }, 
+  { id: 'VoidSurvivor', name: 'Void Fiend', description: 'Corrupted survivor (SotV DLC).', requiredAchievement: 'CompleteVoidEnding', iconUrl: '/characs/voidfiend.webp' },
+  { id: 'Seeker', name: 'Seeker', description: 'Soul-manipulating brawler (SotS DLC).', requiredAchievement: '', iconUrl: '/characs/seeker.webp' },
+  { id: 'Chef', name: 'Chef', description: 'Master of culinary combat (SotS DLC).', requiredAchievement: 'ActivateChef', iconUrl: '/characs/chef.webp' },
+  { id: 'FalseSon', name: 'The False Son', description: 'Herald of the path (SotS DLC).', requiredAchievement: 'UnlockFalseSon', iconUrl: '/characs/falseson.webp' },
+  { id: 'Drifter', name: 'Drifter', description: 'Scavenging brawler (Modded).', requiredAchievement: 'FreeDrifter', iconUrl: '/characs/drifter.webp' },
+  { id: 'DroneTech', name: 'Operator', description: 'Drone specialist (Modded).', requiredAchievement: '', iconUrl: '/characs/operator.webp' },
 ];
 
 export const ACHIEVEMENTS: AchievementDef[] = [

@@ -1,3 +1,4 @@
+
 export interface ParsedProfile {
   fileName: string;
   displayName: string;
@@ -12,7 +13,7 @@ export interface SurvivorDef {
   name: string;
   description: string;
   requiredAchievement: string;
-  iconUrl?: string;
+  iconUrl: string;
 }
 
 export interface AchievementDef {
