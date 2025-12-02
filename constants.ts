@@ -108,7 +108,7 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   // MUL-T
   { id: 'RepeatFirstTeleporter', name: 'Verified', description: 'Unlock MUL-T', category: 'Survivor' },
   { id: 'ToolbotGuardTeleporter', name: 'MUL-T: Pest Control', description: 'Defeat two Beetle Queens without leaving the teleporter zone.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Scrap_Launcher.png/64px-Scrap_Launcher.png' },
-  { id: 'ToolbotKillImpBossWithBfg', name: 'MUL-T: Gotcha!', description: 'Land the killing blow on an Imp Overlord with the Preon Accumulator.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Power_Saw.png/64px-Power_Saw.png' },
+  { id: 'ToolbotKillImpBossWithBfg', name: 'MUL-T: Gotcha!', description: 'Land the killing blow on an Imp Overlord with the Preon Accumulator.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Power-Saw.png/64px-Power-Saw.png' },
   { id: 'ToolbotBeatArenaLater', name: 'MUL-T: Seventh Day', description: 'Clear the Void Fields on Stage 7 or later.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Power_Mode.png/64px-Power_Mode.png' },
   { id: 'ToolbotClearGameMonsoon', name: 'MUL-T Mastery Skin', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/ToolbotSkinJanitor.png/64px-ToolbotSkinJanitor.png' },
   { id: 'ToolbotClearMeridianEvent', name: 'MUL-T Meridian Skin', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock' },
@@ -125,9 +125,9 @@ export const ACHIEVEMENTS: AchievementDef[] = [
 
   // Artificer
   { id: 'FreeMage', name: 'Pause', description: 'Unlock Artificer', category: 'Survivor' },
-  { id: 'MageMultiKill', name: 'Artificer: Massacre', description: 'Perform a multikill of 20 enemies.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Nano-Spear.png/64px-Nano-Spear.png' },
+  { id: 'MageMultiKill', name: 'Artificer: Massacre', description: 'Perform a multikill of 20 enemies.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Plasma_Bolt.png/64px-Plasma_Bolt.png' },
   { id: 'MageAirborneMultiKill', name: 'Artificer: Orbital Bombardment', description: 'Kill 15 enemies before touching the ground.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Ion_Surge.png/64px-Ion_Surge.png' },
-  { id: 'MageFastBoss', name: 'Artificer: Chunked!', description: 'Fully defeat the teleport boss in a one-second burst of damage.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Plasma_Bolt.png/64px-Plasma_Bolt.png' },
+  { id: 'MageFastBoss', name: 'Artificer: Chunked!', description: 'Fully defeat the teleport boss in a one-second burst of damage.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Cast_Nano-Spear.png/64px-Cast_Nano-Spear.png' },
   { id: 'MageClearGameMonsoon', name: 'Artificer Mastery Skin', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/MageSkinChrome.png/64px-MageSkinChrome.png' },
   { id: 'MageClearMeridianEvent', name: 'Artificer Meridian Skin', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock' },
   { id: 'MageDecompile', name: 'Artificer Alloyed Skin', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock' },
@@ -143,8 +143,8 @@ export const ACHIEVEMENTS: AchievementDef[] = [
 
   // REX
   { id: 'RescueTreebot', name: 'Power Plant', description: 'Unlock REX', category: 'Survivor' },
-  { id: 'TreebotLowHealthTeleporter', name: 'REX: Bushwhacked', description: 'Complete an entire teleporter event while under 50% health.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/DIRECTIVE:_Drill.png/64px-DIRECTIVE:_Drill.png' },
-  { id: 'TreebotBigHeal', name: 'REX: Bushwhacked (Alt)', description: 'Complete an entire teleporter event while under 50% health.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/DIRECTIVE:_Harvest.png/64px-DIRECTIVE:_Harvest.png' },
+  { id: 'TreebotLowHealthTeleporter', name: 'REX: Bushwhacked', description: 'Complete an entire teleporter event while under 50% health.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/DIRECTIVE_Drill.png/64px-DIRECTIVE_Drill.png' },
+  { id: 'TreebotBigHeal', name: 'REX: Full of Life', description: 'As REX, heal for 1000 health at once.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/DIRECTIVE_Harvest.png/64px-DIRECTIVE_Harvest.png' },
   { id: 'TreebotDunkClayBoss', name: 'REX: Dunked', description: 'Kill a Clay Dunestrider on Abandoned Aqueduct by throwing it into a pit.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Bramble_Volley.png/64px-Bramble_Volley.png' },
   { id: 'TreebotClearGameMonsoon', name: 'REX Mastery Skin', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/TreebotSkinSmooth.png/64px-TreebotSkinSmooth.png' },
   { id: 'TreebotClearMeridianEvent', name: 'REX Meridian Skin', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock' },
@@ -170,8 +170,8 @@ export const ACHIEVEMENTS: AchievementDef[] = [
 
   // Captain
   { id: 'CompleteMainEnding', name: 'Washed Away', description: 'Unlock Captain', category: 'Survivor' },
-  { id: 'CaptainVisitSeveralStages', name: 'Captain: Wanderlust', description: 'Visit 10 different environments in a single run', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Beacon:_Resupply.png/64px-Beacon:_Resupply.png' },
-  { id: 'CaptainBuyMegaDrone', name: 'Captain: Worth Every Penny', description: 'Repair and recruit a TC-280 Prototype.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Beacon:_Hacking.png/64px-Beacon:_Hacking.png' },
+  { id: 'CaptainVisitSeveralStages', name: 'Captain: Wanderlust', description: 'Visit 10 different environments in a single run', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Beacon_Resupply.png/64px-Beacon_Resupply.png' },
+  { id: 'CaptainBuyMegaDrone', name: 'Captain: Worth Every Penny', description: 'Repair and recruit a TC-280 Prototype.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Beacon_Hacking.png/64px-Beacon_Hacking.png' },
   { id: 'CaptainSupplyDropFinale', name: 'Captain: Smushed', description: 'Kill the final boss using a Supply Beacon.', category: 'Skill', iconUrl: "https://riskofrain2.wiki.gg/images/thumb/OGM-72_'DIABLO'_Strike.png/64px-OGM-72_'DIABLO'_Strike.png" },
   { id: 'CaptainClearGameMonsoon', name: 'Captain Mastery Skin', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/CaptainSkinAdmiral.png/64px-CaptainSkinAdmiral.png' },
   { id: 'CaptainClearMeridianEvent', name: 'Captain Meridian Skin', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock' },
