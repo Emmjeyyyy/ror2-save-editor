@@ -98,8 +98,16 @@ const App: React.FC = () => {
                 <DragDrop onFileLoaded={handleFileLoad} />
             </div>
 
-             <footer className="mt-20 text-gray-600 text-sm">
-                Runs right in your browser. We don’t touch your data, we swear.
+             <footer className="mt-20 text-gray-600 text-sm flex flex-col items-center gap-2">
+                <p>Runs right in your browser. We don’t touch your data, we swear.</p>
+                <a 
+                  href="https://github.com/Emmjeyyyy" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-ror-accent hover:text-ror-accentHover transition-colors font-medium hover:underline"
+                >
+                  developed by Emmjeyyyy
+                </a>
             </footer>
         </main>
         
