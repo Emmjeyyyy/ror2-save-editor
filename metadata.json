@@ -1,0 +1,5 @@
+{
+  "name": "RoR2 Save Editor",
+  "description": "A powerful save file editor for Risk of Rain 2. Compatible with Seekers of the Storm (DLC 2) and Survivors of the Void. Modify Lunar Coins, unlock survivors, and manage achievements.",
+  "requestFramePermissions": []
+}
