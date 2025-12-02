@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import DragDrop from './components/DragDrop';
 import SurvivorEditor from './components/SurvivorEditor';
+import LoadoutEditor from './components/LoadoutEditor';
 import ArtifactEditor from './components/ArtifactEditor';
 import AchievementEditor from './components/AchievementEditor';
 import Sidebar from './components/Sidebar';
@@ -63,6 +64,8 @@ const App: React.FC = () => {
             onShowNotification={(msg) => showNotification(msg, 'success')}
           />
         );
+      case Tab.Loadout:
+        return <LoadoutEditor profile={profile} setProfile={setProfile} />;
       case Tab.Artifacts:
         return <ArtifactEditor profile={profile} setProfile={setProfile} />;
       case Tab.Achievements:
@@ -138,7 +141,8 @@ const App: React.FC = () => {
             <header className="mb-8">
                 <h1 className="text-3xl font-bold text-white mb-1">{activeTab}</h1>
                 <p className="text-gray-500 text-sm">
-                    {activeTab === Tab.Survivors && "Manage survivors, skins, and currency"}
+                    {activeTab === Tab.Survivors && "Manage survivors and currency"}
+                    {activeTab === Tab.Loadout && "Manage skills and skins per survivor"}
                     {activeTab === Tab.Artifacts && "Toggle game modifiers"}
                     {activeTab === Tab.Achievements && "Search and unlock specific achievements"}
                 </p>

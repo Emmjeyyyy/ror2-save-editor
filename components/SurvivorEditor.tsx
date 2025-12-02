@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ParsedProfile, SurvivorDef } from '../types';
 import { SURVIVORS, ACHIEVEMENTS, ALL_ACHIEVEMENTS_LIST, ALL_UNLOCKS } from '../constants';
-import { Lock, Unlock, ChevronDown, ChevronUp, Zap, Palette, CheckSquare, Square, Skull } from 'lucide-react';
+import { Lock, Unlock, Skull } from 'lucide-react';
 
 interface SurvivorEditorProps {
   profile: ParsedProfile;
@@ -36,7 +36,6 @@ const SurvivorIcon: React.FC<{ survivor: SurvivorDef, isUnlocked: boolean }> = (
 };
 
 const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, onShowNotification }) => {
-  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const handleCoinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = parseInt(e.target.value) || 0;
@@ -81,22 +80,6 @@ const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, on
     onShowNotification("Success! All items, survivors, and artifacts unlocked.");
   };
 
-  const toggleAchievement = (e: React.MouseEvent, achievementId: string) => {
-    e.stopPropagation();
-    if (!achievementId) return;
-
-    setProfile(prev => {
-      if (!prev) return null;
-      const newSet = new Set(prev.unlockedAchievements);
-      if (newSet.has(achievementId)) {
-        newSet.delete(achievementId);
-      } else {
-        newSet.add(achievementId);
-      }
-      return { ...prev, unlockedAchievements: newSet };
-    });
-  };
-
   const toggleSurvivor = (e: React.MouseEvent, survivor: typeof SURVIVORS[0]) => {
     e.stopPropagation();
     const achievementId = survivor.requiredAchievement;
@@ -133,10 +116,6 @@ const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, on
       
       return { ...prev, unlockedAchievements: newAchievementsSet, unlockedItems: newUnlocksSet };
     });
-  };
-
-  const toggleExpand = (id: string) => {
-    setExpandedId(prev => prev === id ? null : id);
   };
 
   return (
@@ -200,20 +179,6 @@ const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, on
           
           const isSurvivorUnlocked = achievementUnlocked;
           const isDefault = survivor.requiredAchievement === '';
-          const isExpanded = expandedId === survivor.id;
-
-          // Find related Skills and Skins based on name matching
-          const lookupName = survivor.name.replace(/^The\s+/, '');
-          
-          const survivorContent = ACHIEVEMENTS.filter(a => 
-              (a.category === 'Skill' || a.category === 'Skin Unlock') &&
-              a.name.startsWith(lookupName)
-          );
-
-          const skills = survivorContent.filter(a => a.category === 'Skill');
-          const skins = survivorContent.filter(a => a.category === 'Skin Unlock');
-
-          const hasContent = skills.length > 0 || skins.length > 0;
 
           return (
             <div 
@@ -228,7 +193,7 @@ const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, on
               {/* Main Survivor Card Header */}
               <div 
                   onClick={(e) => !isDefault && toggleSurvivor(e, survivor)}
-                  className={`p-5 cursor-pointer ${!isSurvivorUnlocked && !isDefault ? 'hover:bg-white/5' : ''} rounded-t-xl`}
+                  className={`p-5 cursor-pointer ${!isSurvivorUnlocked && !isDefault ? 'hover:bg-white/5' : ''} rounded-xl`}
               >
                   <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-3">
@@ -253,100 +218,6 @@ const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, on
                       {survivor.description}
                   </p>
               </div>
-
-              {/* Expandable Loadout Section */}
-              {hasContent && (
-                  <div className={`
-                      border-t border-white/5 bg-black/20 rounded-b-xl overflow-hidden transition-all duration-300
-                      ${!isSurvivorUnlocked ? 'opacity-40 pointer-events-none grayscale' : ''}
-                  `}>
-                      <button 
-                          onClick={() => toggleExpand(survivor.id)}
-                          className="w-full flex items-center justify-between px-5 py-3 text-xs uppercase tracking-widest font-bold text-gray-500 hover:text-white hover:bg-white/5 transition-colors"
-                          disabled={!isSurvivorUnlocked}
-                      >
-                          <span>Loadout & Skins</span>
-                          {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                      </button>
-
-                      {isExpanded && (
-                          <div className="px-5 pb-5 pt-2 space-y-5 animate-in slide-in-from-top-2 duration-200">
-                              
-                              {/* Skills Section */}
-                              {skills.length > 0 && (
-                                  <div>
-                                      <div className="flex items-center gap-2 text-ror-blue mb-3 text-sm font-bold uppercase tracking-wider">
-                                          <Zap size={14} /> Skills
-                                      </div>
-                                      <div className="space-y-2">
-                                          {skills.map(skill => {
-                                              const unlocked = profile.unlockedAchievements.has(skill.id);
-                                              return (
-                                                  <div 
-                                                      key={skill.id}
-                                                      onClick={(e) => toggleAchievement(e, skill.id)}
-                                                      className={`
-                                                          flex items-start gap-3 p-2 rounded-lg border cursor-pointer hover:bg-white/5 transition-colors
-                                                          ${unlocked ? 'border-ror-blue/30 bg-ror-blue/5' : 'border-transparent text-gray-500'}
-                                                      `}
-                                                  >
-                                                      <div className={`mt-0.5 ${unlocked ? 'text-ror-blue' : 'text-gray-600'}`}>
-                                                          {unlocked ? <CheckSquare size={16} /> : <Square size={16} />}
-                                                      </div>
-                                                      <div className="flex-1">
-                                                          <div className={`text-xs font-bold ${unlocked ? 'text-gray-200' : 'text-gray-500'}`}>
-                                                              {skill.name.split(': ')[1] || skill.name}
-                                                          </div>
-                                                          <div className="text-[10px] text-gray-500 leading-tight mt-0.5">
-                                                              {skill.description}
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              );
-                                          })}
-                                      </div>
-                                  </div>
-                              )}
-
-                              {/* Skins Section */}
-                              {skins.length > 0 && (
-                                  <div>
-                                      <div className="flex items-center gap-2 text-purple-400 mb-3 text-sm font-bold uppercase tracking-wider">
-                                          <Palette size={14} /> Skins
-                                      </div>
-                                      <div className="space-y-2">
-                                          {skins.map(skin => {
-                                              const unlocked = profile.unlockedAchievements.has(skin.id);
-                                              return (
-                                                  <div 
-                                                      key={skin.id}
-                                                      onClick={(e) => toggleAchievement(e, skin.id)}
-                                                      className={`
-                                                          flex items-center gap-3 p-2 rounded-lg border cursor-pointer hover:bg-white/5 transition-colors
-                                                          ${unlocked ? 'border-purple-500/30 bg-purple-500/5' : 'border-transparent text-gray-500'}
-                                                      `}
-                                                  >
-                                                      <div className={unlocked ? 'text-purple-400' : 'text-gray-600'}>
-                                                          {unlocked ? <CheckSquare size={16} /> : <Square size={16} />}
-                                                      </div>
-                                                      <div className="flex-1">
-                                                          <div className={`text-xs font-bold ${unlocked ? 'text-gray-200' : 'text-gray-500'}`}>
-                                                              {skin.name}
-                                                          </div>
-                                                          <div className="text-[10px] text-gray-500 leading-tight">
-                                                              {skin.description}
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              );
-                                          })}
-                                      </div>
-                                  </div>
-                              )}
-                          </div>
-                      )}
-                  </div>
-              )}
             </div>
           );
         })}

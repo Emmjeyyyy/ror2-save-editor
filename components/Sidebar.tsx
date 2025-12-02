@@ -1,6 +1,6 @@
 import React from 'react';
 import { ParsedProfile, Tab } from '../types';
-import { Users, Hexagon, Trophy, User as UserIcon, X, Download } from 'lucide-react';
+import { Users, Hexagon, Trophy, User as UserIcon, X, Download, Zap } from 'lucide-react';
 import Syringe from './Syringe';
 
 interface SidebarProps {
@@ -14,6 +14,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, profile, onSave, onRequestExit }) => {
   const tabs = [
     { id: Tab.Survivors, icon: Users, label: 'Survivors' },
+    { id: Tab.Loadout, icon: Zap, label: 'Loadout' },
     { id: Tab.Artifacts, icon: Hexagon, label: 'Artifacts' },
     { id: Tab.Achievements, icon: Trophy, label: 'Achievements' },
   ];

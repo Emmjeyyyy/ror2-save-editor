@@ -27,6 +27,7 @@ export interface AchievementDef {
 
 export enum Tab {
   Survivors = 'Survivors',
+  Loadout = 'Loadout',
   Artifacts = 'Artifacts',
   Achievements = 'Achievements',
 }
