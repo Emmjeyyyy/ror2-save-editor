@@ -37,6 +37,14 @@ const DragDrop: React.FC<DragDropProps> = ({ onFileLoaded }) => {
 
   const processFile = (file: File) => {
     setError(null);
+
+    // 1 MB limit (1024 * 1024 bytes)
+    const MAX_FILE_SIZE = 1024 * 1024;
+    if (file.size > MAX_FILE_SIZE) {
+      setError("File is too large. Please upload a file smaller than 1 MB.");
+      return;
+    }
+
     if (!file.name.endsWith('.xml')) {
       setError("Please upload a valid .xml user profile.");
       return;
