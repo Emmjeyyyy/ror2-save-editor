@@ -5,22 +5,6 @@ interface DragDropProps {
   onFileLoaded: (content: string, name: string) => void;
 }
 
-const SAMPLE_PROFILE_XML = `<?xml version="1.0" encoding="utf-8"?>
-<UserProfile>
-  <name>RiskOfRain_Tester</name>
-  <coins>1000</coins>
-  <achievementsList>CommandoClearGameMonsoon HuntressClearGameMonsoon AttackSpeed MoveSpeed KillEliteMonster LoopOnce</achievementsList>
-  <stats>
-    <unlock>Characters.Commando</unlock>
-    <unlock>Characters.Huntress</unlock>
-    <unlock>Skins.Commando.Alt1</unlock>
-    <unlock>Skins.Huntress.Alt1</unlock>
-    <unlock>Items.Hoof</unlock>
-    <unlock>Items.Syringe</unlock>
-    <unlock>Items.CritGlasses</unlock>
-  </stats>
-</UserProfile>`;
-
 const DragDrop: React.FC<DragDropProps> = ({ onFileLoaded }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -37,14 +21,6 @@ const DragDrop: React.FC<DragDropProps> = ({ onFileLoaded }) => {
 
   const processFile = (file: File) => {
     setError(null);
-
-    // 1 MB limit (1024 * 1024 bytes)
-    const MAX_FILE_SIZE = 1024 * 1024;
-    if (file.size > MAX_FILE_SIZE) {
-      setError("File is too large. Please upload a file smaller than 1 MB.");
-      return;
-    }
-
     if (!file.name.endsWith('.xml')) {
       setError("Please upload a valid .xml user profile.");
       return;
@@ -76,11 +52,6 @@ const DragDrop: React.FC<DragDropProps> = ({ onFileLoaded }) => {
     if (e.target.files && e.target.files.length > 0) {
       processFile(e.target.files[0]);
     }
-  };
-
-  const handleLoadSample = (e: React.MouseEvent) => {
-    e.preventDefault();
-    onFileLoaded(SAMPLE_PROFILE_XML, "sample_profile.xml");
   };
 
   return (
@@ -120,18 +91,6 @@ const DragDrop: React.FC<DragDropProps> = ({ onFileLoaded }) => {
               C:\Program Files(x86)\Steam\userdata\[Number]\632360\remote\UserProfiles
           </div>
         </div>
-      </div>
-
-      <div className="mt-4 text-center">
-        <p className="text-gray-500 text-sm">
-          Just want to test the editor?{' '}
-          <button 
-            onClick={handleLoadSample}
-            className="text-ror-accent hover:text-ror-accentHover hover:underline font-medium focus:outline-none transition-colors"
-          >
-            Load a sample save file.
-          </button>
-        </p>
       </div>
 
       {error && (
