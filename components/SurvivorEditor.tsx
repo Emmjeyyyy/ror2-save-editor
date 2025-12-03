@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import { ParsedProfile, SurvivorDef } from '../types';
 import { SURVIVORS, ACHIEVEMENTS, ALL_ACHIEVEMENTS_LIST, ALL_UNLOCKS } from '../constants';
@@ -92,12 +94,13 @@ const SurvivorEditor: React.FC<SurvivorEditorProps> = ({ profile, setProfile, on
       const newAchievementsSet = new Set(prev.unlockedAchievements);
       const newUnlocksSet = new Set(prev.unlockedItems);
       
-      // Calculate associated content (Skills and Skins) based on name matching
+      // Calculate associated content (Skills and Skins) based on name matching for skills and ID matching for skins
       const lookupName = survivor.name.replace(/^The\s+/, '');
-      const associatedContent = ACHIEVEMENTS.filter(a => 
-          (a.category === 'Skill' || a.category === 'Skin Unlock') &&
-          a.name.startsWith(lookupName)
-      );
+      const associatedContent = ACHIEVEMENTS.filter(a => {
+          if (a.category === 'Skill') return a.name.startsWith(lookupName);
+          if (a.category === 'Skin Unlock') return a.id.startsWith(survivor.id);
+          return false;
+      });
       
       // Check if currently unlocked
       const isUnlocked = (survivor.requiredAchievement === '' || newAchievementsSet.has(survivor.requiredAchievement));

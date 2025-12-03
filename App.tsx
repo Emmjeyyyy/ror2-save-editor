@@ -103,14 +103,18 @@ const App: React.FC = () => {
 
              <footer className="mt-20 text-gray-600 text-sm flex flex-col items-center gap-2">
                 <p>Runs right in your browser. We don’t touch your data, we swear.</p>
+
+                <div className="flex flex-row">
+                <p className="mr-1">developed by </p>
                 <a 
                   href="https://github.com/Emmjeyyyy" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-ror-accent hover:text-ror-accentHover transition-colors font-medium hover:underline"
                 >
-                  developed by Emmjeyyyy
+                  Emmjeyyyy
                 </a>
+                </div>
             </footer>
         </main>
         

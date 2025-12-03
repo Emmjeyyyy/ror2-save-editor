@@ -112,10 +112,11 @@ const LoadoutEditor: React.FC<LoadoutEditorProps> = ({ profile, setProfile }) =>
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 pb-10">
           {SURVIVORS.map(survivor => {
               const lookupName = survivor.name.replace(/^The\s+/, '');
-              const survivorContent = ACHIEVEMENTS.filter(a => 
-                  (a.category === 'Skill' || a.category === 'Skin Unlock') &&
-                  a.name.startsWith(lookupName)
-              );
+              const survivorContent = ACHIEVEMENTS.filter(a => {
+                  if (a.category === 'Skill') return a.name.startsWith(lookupName);
+                  if (a.category === 'Skin Unlock') return a.id.startsWith(survivor.id);
+                  return false;
+              });
 
               const skills = survivorContent.filter(a => a.category === 'Skill');
               const skins = survivorContent.filter(a => a.category === 'Skin Unlock');
