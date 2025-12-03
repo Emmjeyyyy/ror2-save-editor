@@ -155,18 +155,18 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'LoaderSpeedRun', name: 'Loader: Swing By', description: 'Reach and proceed through the Celestial Portal in 25 minutes or less.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Spiked_Fist.png/64px-Spiked_Fist.png' },
   { id: 'LoaderBigSlam', name: 'Loader: Earthshatter', description: 'Land a Charged Gauntlet hit at 300mph or higher.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Thunder_Gauntlet.png/64px-Thunder_Gauntlet.png' },
   { id: 'LoaderKillLoaders', name: 'Loader: The Thunderdome', description: "Kill three other Loaders in the Bulwark's ambry.", category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Thunderslam.png/64px-Thunderslam.png' },
-  { id: 'LoaderClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/LoaderSkinClassic.png' },
-  { id: 'LoaderClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Caelus.png' },
-  { id: 'LoaderDecompile', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock' },
+  { id: 'LoaderClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Classic.png/64px-Classic.png' },
+  { id: 'LoaderClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Neoteric.png/64px-Neoteric.png' },
+  { id: 'LoaderDecompile', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Unloaded.png/64px-Unloaded.png' },
 
   // Acrid
   { id: 'BeatArena', name: '...To Be Left Alone', description: 'Unlock Acrid', category: 'Survivor' },
   { id: 'CrocoTotalInfectionsMilestone', name: 'Acrid: Pandemic', description: 'Inflict Poison 1000 total times.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Blight.png/64px-Blight.png' },
   { id: 'CrocoKillScavenger', name: 'Acrid: Bad Medecine', description: 'Land the final blow on a Scavenger.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Ravenous_Bite.png/64px-Ravenous_Bite.png' },
   { id: 'CrocoKillWeakEnemiesMilestone', name: 'Acrid: Easy Prey', description: 'Land the killing blow on 50 total enemies that have 1 hit point left.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Frenzied_Leap.png/64px-Frenzied_Leap.png' },
-  { id: 'CrocoClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/CrocoSkinAlbino.png' },
-  { id: 'CrocoClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Amphibious.png' },
-  { id: 'CrocoPurge', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock' },
+  { id: 'CrocoClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Albino.png/64px-Albino.png' },
+  { id: 'CrocoClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Iguania.png/64px-Iguania.png' },
+  { id: 'CrocoPurge', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Rewild.png/64px-Rewild.png' },
 
   // Captain
   { id: 'CompleteMainEnding', name: 'Washed Away', description: 'Unlock Captain', category: 'Survivor' },
