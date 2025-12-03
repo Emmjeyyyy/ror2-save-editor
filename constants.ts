@@ -194,7 +194,7 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'SeekerPerfect20Meditation', name: 'Seeker: Tranquility', description: 'As Seeker, use Meditate to restore 50% of your health.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Meditate.png/64px-Meditate.png' },
   { id: 'NukeSojourn', name: 'Seeker: Sojourn', description: 'As Seeker, kill 15 enemies with a single usage of Sojourn.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Sojourn.png/64px-Sojourn.png' },
   { id: 'SeekerClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Beyond.png/64px-Beyond.png' },
-  { id: 'SeekerClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/SeekerMeridian.png' },
+  { id: 'SeekerClearMeridianEvent', name: 'Seeker: Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Challenge', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/SeekerMeridian.png' },
 
   // False Son
   { id: 'UnlockFalseSon', name: 'Purified Freedom', description: 'Unlock The False Son', category: 'Survivor' },
@@ -202,7 +202,7 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'FalseSonKillMithrixWithGoldenGal', name: 'False Son: Inheritance', description: 'As False Son, defeat Mithrix while holding the Halcyon Seed.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Lunar_Spikes.png/64px-Lunar_Spikes.png' },
   { id: 'FalseSonGrowthChallenge', name: 'False Son: Unbound', description: 'As False Son, maintain maximum growth for 10 seconds.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Step_of_the_Brothers.png/64px-Step_of_the_Brothers.png' },
   { id: 'FalseSonClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Unchained.png/64px-Unchained.png' },
-  { id: 'FalseSonClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/FalseSonMeridian.png' },
+  { id: 'FalseSonClearMeridianEvent', name: 'False Son: Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Challenge', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/FalseSonMeridian.png' },
 
   // Chef
   { id: 'ActivateChef', name: 'Order Up!', description: 'Unlock Chef', category: 'Survivor' },
@@ -210,7 +210,7 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'BurnMithrix', name: 'Chef: Creme Brulee', description: 'As Chef, defeat Mithrix while he is burning.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Glaze.png/64px-Glaze.png' },
   { id: 'RolyPolyHitFiveAirEnemies', name: 'Chef: Rolling Pin', description: 'As Chef, hit 5 airborne enemies with a single Roll.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Roll.png/64px-Roll.png' },
   { id: 'ChefClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/PRES-10.png/64px-PRES-10.png' },
-  { id: 'ChefMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/ChefMeridian.png' },
+  { id: 'ChefMeridianEvent', name: 'Chef: Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Challenge', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/ChefMeridian.png' },
 
   // Drifter (Alloyed Collective DLC)
   { id: 'FreeDrifter', name: 'Drifter', description: 'Unlock Drifter', category: 'Survivor' },
