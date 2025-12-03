@@ -1,4 +1,4 @@
-# Risk of Rain 2 Save Editor (Web Version)
+# Risk of Rain 2 Save Editor
 
 Easily modify your Risk of Rain 2 save files in your browser. Full support for The Alloyed Collective DLC, including all new survivors, items, and artifacts. Perfect for players who don’t have the time to unlock everything manually.  
 
