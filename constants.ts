@@ -155,25 +155,25 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'LoaderSpeedRun', name: 'Loader: Swing By', description: 'Reach and proceed through the Celestial Portal in 25 minutes or less.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Spiked_Fist.png/64px-Spiked_Fist.png' },
   { id: 'LoaderBigSlam', name: 'Loader: Earthshatter', description: 'Land a Charged Gauntlet hit at 300mph or higher.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Thunder_Gauntlet.png/64px-Thunder_Gauntlet.png' },
   { id: 'LoaderKillLoaders', name: 'Loader: The Thunderdome', description: "Kill three other Loaders in the Bulwark's ambry.", category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Thunderslam.png/64px-Thunderslam.png' },
-  { id: 'LoaderClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Classic.png/64px-Classic.png' },
-  { id: 'LoaderClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Neoteric.png/64px-Neoteric.png' },
-  { id: 'LoaderDecompile', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Unloaded.png/64px-Unloaded.png' },
+  { id: 'LoaderClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Classic.png' },
+  { id: 'LoaderClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Neoteric.png' },
+  { id: 'LoaderDecompile', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Unloaded.png' },
 
   // Acrid
   { id: 'BeatArena', name: '...To Be Left Alone', description: 'Unlock Acrid', category: 'Survivor' },
   { id: 'CrocoTotalInfectionsMilestone', name: 'Acrid: Pandemic', description: 'Inflict Poison 1000 total times.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Blight.png/64px-Blight.png' },
   { id: 'CrocoKillScavenger', name: 'Acrid: Bad Medecine', description: 'Land the final blow on a Scavenger.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Ravenous_Bite.png/64px-Ravenous_Bite.png' },
   { id: 'CrocoKillWeakEnemiesMilestone', name: 'Acrid: Easy Prey', description: 'Land the killing blow on 50 total enemies that have 1 hit point left.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Frenzied_Leap.png/64px-Frenzied_Leap.png' },
-  { id: 'CrocoClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Albino.png/64px-Albino.png' },
-  { id: 'CrocoClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Iguania.png/64px-Iguania.png' },
-  { id: 'CrocoPurge', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Rewild.png/64px-Rewild.png' },
+  { id: 'CrocoClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Albino.png' },
+  { id: 'CrocoClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Iguania.png' },
+  { id: 'CrocoPurge', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Rewild.png' },
 
   // Captain
   { id: 'CompleteMainEnding', name: 'Washed Away', description: 'Unlock Captain', category: 'Survivor' },
   { id: 'CaptainVisitSeveralStages', name: 'Captain: Wanderlust', description: 'Visit 10 different environments in a single run', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Beacon_Resupply.png/64px-Beacon_Resupply.png' },
   { id: 'CaptainBuyMegaDrone', name: 'Captain: Worth Every Penny', description: 'Repair and recruit a TC-280 Prototype.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Beacon_Hacking.png/64px-Beacon_Hacking.png' },
   { id: 'CaptainSupplyDropFinale', name: 'Captain: Smushed', description: 'Kill the final boss using a Supply Beacon.', category: 'Skill', iconUrl: "https://riskofrain2.wiki.gg/images/thumb/OGM-72_'DIABLO'_Strike.png/64px-OGM-72_'DIABLO'_Strike.png" },
-  { id: 'CaptainClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/CaptainSkinAdmiral.png' },
+  { id: 'CaptainClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Admiral.png' },
   { id: 'CaptainClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Plated.png' },
   { id: 'CaptainDecompile', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock' },
 
@@ -181,36 +181,36 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'RailgunnerConsecutiveWeakPoints', name: 'Railgunner: Marksman', description: 'Fire 30 consecutive sniper shots without missing a Weak Point.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/HH44_Marksman.png/64px-HH44_Marksman.png' },
   { id: 'RailgunnerDealMassiveDamage', name: 'Railgunner: Annihilator', description: 'Deal 1,000,000 damage in one shot.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Cryocharge.png/64px-Cryocharge.png' },
   { id: 'RailgunnerAirborneMultiKill', name: 'Railgunner: Trickshot', description: 'Get 3 kills with a single Supercharge shot while airborne.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Polar_Field_Device.png/64px-Polar_Field_Device.png' },
-  { id: 'RailgunnerClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/RailgunnerSkinMarksman.png' },
+  { id: 'RailgunnerClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Marksman.png' },
   { id: 'RailgunnerClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Carbon.png' },
 
   // Void Fiend
   { id: 'CompleteVoidEnding', name: 'Dragged Below', description: 'Unlock Void Fiend', category: 'Survivor' },
-  { id: 'VoidSurvivorClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/VoidSurvivorSkinPurified.png' },
+  { id: 'VoidSurvivorClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Purified.png' },
   { id: 'VoidSurvivorClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Obsidian.png' },
 
   // Seeker
   { id: 'SeekerAirMultiHit', name: 'Seeker: Airborne Souls', description: 'Hit three or more airborne enemies with a single use of the exploding third hit of Spirit Punch.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Soul_Spiral.png/64px-Soul_Spiral.png' },
   { id: 'SeekerPerfect20Meditation', name: 'Seeker: Tranquility', description: 'As Seeker, use Meditate to restore 50% of your health.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Meditate.png/64px-Meditate.png' },
   { id: 'NukeSojourn', name: 'Seeker: Sojourn', description: 'As Seeker, kill 15 enemies with a single usage of Sojourn.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Sojourn.png/64px-Sojourn.png' },
-  { id: 'SeekerClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/SeekerSkinMastery.png' },
-  { id: 'SeekerClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/SeekerSkinAlt1.png' },
+  { id: 'SeekerClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/SeekerMastery.png' },
+  { id: 'SeekerClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/SeekerMeridian.png' },
 
   // False Son
   { id: 'UnlockFalseSon', name: 'Purified Freedom', description: 'Unlock The False Son', category: 'Survivor' },
   { id: 'FalseSonLaserMultiKill', name: 'False Son: Stare Them Down', description: 'Kill 15 enemies with one activation of Laser of the Father.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Laser_of_the_Father.png/64px-Laser_of_the_Father.png' },
   { id: 'FalseSonKillMithrixWithGoldenGal', name: 'False Son: Inheritance', description: 'As False Son, defeat Mithrix while holding the Halcyon Seed.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Lunar_Spikes.png/64px-Lunar_Spikes.png' },
   { id: 'FalseSonGrowthChallenge', name: 'False Son: Unbound', description: 'As False Son, maintain maximum growth for 10 seconds.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Step_of_the_Brothers.png/64px-Step_of_the_Brothers.png' },
-  { id: 'FalseSonClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/FalseSonSkinMastery.png' },
-  { id: 'FalseSonClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/FalseSonSkinAlt1.png' },
+  { id: 'FalseSonClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/FalseSonMastery.png' },
+  { id: 'FalseSonClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/FalseSonMeridian.png' },
 
   // Chef
   { id: 'ActivateChef', name: 'Order Up!', description: 'Unlock Chef', category: 'Survivor' },
   { id: 'BarbecueQuantityBisonInRun', name: 'Chef: Barbecued Bison Recipe Complete', description: 'Complete 10 recipes by searing an oiled bison with Sear.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Sear.png/64px-Sear.png' },
   { id: 'BurnMithrix', name: 'Chef: Creme Brulee', description: 'As Chef, defeat Mithrix while he is burning.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Glaze.png/64px-Glaze.png' },
   { id: 'RolyPolyHitFiveAirEnemies', name: 'Chef: Rolling Pin', description: 'As Chef, hit 5 airborne enemies with a single Roll.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Roll.png/64px-Roll.png' },
-  { id: 'ChefClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/ChefSkinMastery.png' },
-  { id: 'ChefMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/ChefSkinAlt1.png' },
+  { id: 'ChefClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/ChefMastery.png' },
+  { id: 'ChefMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/ChefMeridian.png' },
 
   // Drifter (Alloyed Collective DLC)
   { id: 'FreeDrifter', name: 'Drifter', description: 'Unlock Drifter', category: 'Survivor' },
