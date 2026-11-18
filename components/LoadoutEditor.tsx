@@ -123,7 +123,6 @@ const LoadoutEditor: React.FC<LoadoutEditorProps> = ({ profile, setProfile }) =>
               
               const isSurvivorUnlocked = survivor.requiredAchievement === '' || profile.unlockedAchievements.has(survivor.requiredAchievement);
               
-              if (skills.length === 0 && skins.length === 0) return null;
 
               return (
                   <div key={survivor.id} className={`rounded-xl border p-5 transition-all flex flex-col ${isSurvivorUnlocked ? 'bg-ror-panel border-white/10' : 'bg-black/40 border-white/5 opacity-60'}`}>

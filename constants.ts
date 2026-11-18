@@ -16,13 +16,15 @@ export const SURVIVORS: SurvivorDef[] = [
   { id: 'Loader', name: 'Loader', description: 'Heavy hitting grappler.', requiredAchievement: 'DefeatSuperRoboBallBoss', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Loader.png/120px-Loader.png' },
   { id: 'Croco', name: 'Acrid', description: 'Poison spreading beast.', requiredAchievement: 'BeatArena', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Acrid.png/120px-Acrid.png' },
   { id: 'Captain', name: 'Captain', description: 'Commander of the UES Safe Travels.', requiredAchievement: 'CompleteMainEnding', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Captain.png/120px-Captain.png' },
-  { id: 'Railgunner', name: 'Railgunner', description: 'Long-range sniper (SotV DLC).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Railgunner.png/120px-Railgunner.png' }, 
+  { id: 'Railgunner', name: 'Railgunner', description: 'Long-range sniper (SotV DLC).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Railgunner.png/120px-Railgunner.png' },
   { id: 'VoidSurvivor', name: 'Void Fiend', description: 'Corrupted survivor (SotV DLC).', requiredAchievement: 'CompleteVoidEnding', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Void_Fiend.png/120px-Void_Fiend.png' },
   { id: 'Seeker', name: 'Seeker', description: 'Soul-manipulating brawler (SotS DLC).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Seeker.png/120px-Seeker.png' },
   { id: 'Chef', name: 'Chef', description: 'Master of culinary combat (SotS DLC).', requiredAchievement: 'ActivateChef', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/CHEF.png/120px-CHEF.png?9c5cbf' },
   { id: 'FalseSon', name: 'The False Son', description: 'Herald of the path (SotS DLC).', requiredAchievement: 'UnlockFalseSon', iconUrl: 'https://riskofrain2.wiki.gg/images/False_Son.png' },
-  { id: 'Drifter', name: 'Drifter', description: 'Scavenging brawler (Modded).', requiredAchievement: 'FreeDrifter', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Drifter.png/120px-Drifter.png?76c399' },
-  { id: 'DroneTech', name: 'Operator', description: 'Drone specialist (Modded).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Operator.png/120px-Operator.png?27bdc6' },
+  { id: 'Drifter', name: 'Drifter', description: 'Scavenging brawler (Alloyed Collective DLC).', requiredAchievement: 'FreeDrifter', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Drifter.png/120px-Drifter.png?76c399' },
+  { id: 'DroneTech', name: 'Operator', description: 'Drone specialist (Alloyed Collective DLC).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Operator.png/120px-Operator.png?27bdc6' },
+  { id: 'Enforcer2', name: 'Enforcer', description: 'Shield-bearing defender (Hallowed Concepts DLC).', requiredAchievement: '', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Enforcer.png/120px-Enforcer.png' },
+  { id: 'Acolyte', name: 'Acolyte', description: 'Sacrificial caster (New DLC).', requiredAchievement: 'AcolyteClearUltima', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Acolyte.png/120px-Acolyte.png' },
 ];
 
 export const ACHIEVEMENTS: AchievementDef[] = [
@@ -155,18 +157,16 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'LoaderSpeedRun', name: 'Loader: Swing By', description: 'Reach and proceed through the Celestial Portal in 25 minutes or less.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Spiked_Fist.png/64px-Spiked_Fist.png' },
   { id: 'LoaderBigSlam', name: 'Loader: Earthshatter', description: 'Land a Charged Gauntlet hit at 300mph or higher.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Thunder_Gauntlet.png/64px-Thunder_Gauntlet.png' },
   { id: 'LoaderKillLoaders', name: 'Loader: The Thunderdome', description: "Kill three other Loaders in the Bulwark's ambry.", category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Thunderslam.png/64px-Thunderslam.png' },
-  { id: 'LoaderClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Classic.png' },
-  { id: 'LoaderClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Neoteric.png' },
-  { id: 'LoaderDecompile', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Unloaded.png' },
+  { id: 'LoaderClearGameMonsoon', name: 'Loader: Classic', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/Classic.png' },
+  { id: 'LoaderClearMeridianEvent', name: 'Loader: Neoteric', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/Neoteric.png' },
 
   // Acrid
   { id: 'BeatArena', name: '...To Be Left Alone', description: 'Unlock Acrid', category: 'Survivor' },
   { id: 'CrocoTotalInfectionsMilestone', name: 'Acrid: Pandemic', description: 'Inflict Poison 1000 total times.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Blight.png/64px-Blight.png' },
   { id: 'CrocoKillScavenger', name: 'Acrid: Bad Medecine', description: 'Land the final blow on a Scavenger.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Ravenous_Bite.png/64px-Ravenous_Bite.png' },
   { id: 'CrocoKillWeakEnemiesMilestone', name: 'Acrid: Easy Prey', description: 'Land the killing blow on 50 total enemies that have 1 hit point left.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Frenzied_Leap.png/64px-Frenzied_Leap.png' },
-  { id: 'CrocoClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Albino.png' },
-  { id: 'CrocoClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Iguania.png' },
-  { id: 'CrocoPurge', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Rewild.png' },
+  { id: 'CrocoClearGameMonsoon', name: 'Acrid: Albino', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/d/d6/Albino.png/revision/latest?cb=20200201130933' },
+  { id: 'CrocoClearMeridianEvent', name: 'Acrid: Iguania', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/7/72/Iguania.png/revision/latest?cb=20241020230919' },
 
   // Captain
   { id: 'CompleteMainEnding', name: 'Washed Away', description: 'Unlock Captain', category: 'Survivor' },
@@ -175,19 +175,19 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'CaptainSupplyDropFinale', name: 'Captain: Smushed', description: 'Kill the final boss using a Supply Beacon.', category: 'Skill', iconUrl: "https://riskofrain2.wiki.gg/images/thumb/OGM-72_'DIABLO'_Strike.png/64px-OGM-72_'DIABLO'_Strike.png" },
   { id: 'CaptainClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Admiral.png/64px-Admiral.png' },
   { id: 'CaptainClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Colonel.png/64px-Colonel.png' },
-  { id: 'CaptainDecompile', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Private.png/64px-Private.png'  },
+  { id: 'CaptainDecompile', name: 'Alloyed', description: 'Purge/Decompile from Alloyed Collective DLC.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Private.png/64px-Private.png' },
 
   // Railgunner
   { id: 'RailgunnerConsecutiveWeakPoints', name: 'Railgunner: Marksman', description: 'Fire 30 consecutive sniper shots without missing a Weak Point.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/HH44_Marksman.png/64px-HH44_Marksman.png' },
   { id: 'RailgunnerDealMassiveDamage', name: 'Railgunner: Annihilator', description: 'Deal 1,000,000 damage in one shot.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Cryocharge.png/64px-Cryocharge.png' },
   { id: 'RailgunnerAirborneMultiKill', name: 'Railgunner: Trickshot', description: 'Get 3 kills with a single Supercharge shot while airborne.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Polar_Field_Device.png/64px-Polar_Field_Device.png' },
-  { id: 'RailgunnerClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Marksman.png' },
-  { id: 'RailgunnerClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Deadeye.png/64px-Deadeye.png' },
+  { id: 'RailgunnerClearGameMonsoon', name: 'Railgunner: Marksman', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/Marksman.png' },
+  { id: 'RailgunnerClearMeridianEvent', name: 'Railgunner: Deadeye', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/Deadeye.png' },
 
   // Void Fiend
   { id: 'CompleteVoidEnding', name: 'Dragged Below', description: 'Unlock Void Fiend', category: 'Survivor' },
-  { id: 'VoidSurvivorClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Purified.png' },
-  { id: 'VoidSurvivorClearMeridianEvent', name: 'Meridian', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Sanctified.png/64px-Sanctified.png' },
+  { id: 'VoidSurvivorClearGameMonsoon', name: 'Void Fiend: Purified', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/Purified.png' },
+  { id: 'VoidSurvivorClearMeridianEvent', name: 'Void Fiend: Sanctified', description: 'Complete the Event on Prime Meridian.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/Sanctified.png' },
 
   // Seeker
   { id: 'SeekerAirMultiHit', name: 'Seeker: Airborne Souls', description: 'Hit three or more airborne enemies with a single use of the exploding third hit of Spirit Punch.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Soul_Spiral.png/64px-Soul_Spiral.png' },
@@ -214,47 +214,62 @@ export const ACHIEVEMENTS: AchievementDef[] = [
 
   // Drifter (Alloyed Collective DLC)
   { id: 'FreeDrifter', name: 'Drifter', description: 'Unlock Drifter', category: 'Survivor' },
-  { id: 'DrifterJunkCubeAchievement', name: 'Drifter: Trash Compactor', description: 'As Drifter, carry 20 temporary items at once.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Junk_Cube.png/64px-Junk_Cube.png'  },
-  { id: 'DrifterTornadoSlamAchievement', name: 'Drifter: In The Bag', description: '	As Drifter, defeat a boss from the challenge of the Mountain by tossing a Shrine of the Mountain.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Tornado_Slam.png/64px-Tornado_Slam.png'  },
-  { id: 'DrifterTinkerAchievement', name: 'Drifter: Recycling', description: 'As Drifter, claim the contents of the lost backpack in the vault of Solutional Haunt.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Tinker.png/64px-Tinker.png'  },
+  { id: 'DrifterJunkCubeAchievement', name: 'Drifter: Trash Compactor', description: 'As Drifter, carry 20 temporary items at once.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Junk_Cube.png/64px-Junk_Cube.png' },
+  { id: 'DrifterTornadoSlamAchievement', name: 'Drifter: In The Bag', description: '	As Drifter, defeat a boss from the challenge of the Mountain by tossing a Shrine of the Mountain.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Tornado_Slam.png/64px-Tornado_Slam.png' },
+  { id: 'DrifterTinkerAchievement', name: 'Drifter: Recycling', description: 'As Drifter, claim the contents of the lost backpack in the vault of Solutional Haunt.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Tinker.png/64px-Tinker.png' },
   { id: 'DrifterClearGameMonsoon', name: 'Mastery', description: 'Beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/thumb/Collector.png/64px-Collector.png' },
 
   // Operator (DroneTech) (Alloyed Collective DLC)
-  { 
-    id: 'DroneTechTrickshot', 
-    name: 'Operator: That All You Got?', 
-    description: 'As Operator, kill 4 different types of monsters with a single ricochet.', 
-    category: 'Skill', 
-    iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/CMD-SWARM.png' 
+  {
+    id: 'DroneTechTrickshot',
+    name: 'Operator: That All You Got?',
+    description: 'As Operator, kill 4 different types of monsters with a single ricochet.',
+    category: 'Skill',
+    iconUrl: 'https://riskofrain2.wiki.gg/images/CMD-SWARM.png'
   },
-  { 
-    id: 'DroneTechDefeatVultureBossWhileAirborne', 
-    name: 'Operator: Not So Different', 
-    description: 'As Operator, defeat the Teleporter boss on Conduit Canyon without touching the ground.', 
-    category: 'Skill', 
-    iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/FIREWALL.png' 
+  {
+    id: 'DroneTechDefeatVultureBossWhileAirborne',
+    name: 'Operator: Not So Different',
+    description: 'As Operator, defeat the Teleporter boss on Conduit Canyon without touching the ground.',
+    category: 'Skill',
+    iconUrl: 'https://riskofrain2.wiki.gg/images/FIREWALL.png'
   },
-  { 
-    id: 'DroneTechJuggleLemurian', 
-    name: 'Operator: That Just Happened', 
-    description: 'As Operator, keep an Elder Lemurian airborne for 10 seconds.', 
-    category: 'Skill', 
-    iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Amp_Core.png' 
+  {
+    id: 'DroneTechJuggleLemurian',
+    name: 'Operator: That Just Happened',
+    description: 'As Operator, keep an Elder Lemurian airborne for 10 seconds.',
+    category: 'Skill',
+    iconUrl: 'https://riskofrain2.wiki.gg/images/Amp_Core.png'
   },
-  { 
-    id: 'DroneTechUniqueDrones', 
-    name: 'Operator: Putting Together a Team', 
-    description: 'As Operator, recruit 5 different drones.', 
-    category: 'Skill', 
-    iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Transport_Drone_Mk_2.png' 
+  {
+    id: 'DroneTechUniqueDrones',
+    name: 'Operator: Putting Together a Team',
+    description: 'As Operator, recruit 5 different drones.',
+    category: 'Skill',
+    iconUrl: 'https://riskofrain2.wiki.gg/images/Transport_Drone_Mk_2.png'
   },
-  { 
-    id: 'DroneTechClearGameMonsoon', 
-    name: 'Mastery', 
-    description: 'As Operator, beat the game or obliterate on Monsoon.', 
-    category: 'Skin Unlock', 
-    iconUrl: 'https://riskofrain2.wiki.gg/wiki/Special:FilePath/Drone_Division.png' 
+  {
+    id: 'DroneTechClearGameMonsoon',
+    name: 'Operator: Drone Division',
+    description: 'As Operator, beat the game or obliterate on Monsoon.',
+    category: 'Skin Unlock',
+    iconUrl: 'https://riskofrain2.wiki.gg/images/Drone_Division.png'
   },
+  // Enforcer (New DLC)
+  { id: 'Enforcer2RepeatedlyDamageMagmaWorm', name: 'Enforcer: Shrapnel Grenade', description: 'As Enforcer, repeatedly damage the Magma Worm.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/Shrapnel_Grenade.png' },
+  { id: 'Enforcer2ParryVagrant', name: 'Enforcer: Surge Protection', description: 'As Enforcer, parry the Vagrant.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/Surge_Protection.png' },
+  { id: 'Enforcer2BlockXTeleporter', name: 'Enforcer: Ripcord', description: 'As Enforcer, block X damage during a teleporter event.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/Ripcord.png' },
+  { id: 'Enforcer2TankTitanLaser', name: 'Enforcer: Crash Point', description: 'As Enforcer, tank a Titan laser.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/Crash_Point.png' },
+
+  // Acolyte (New DLC)
+  { id: 'AcolyteReaperMultiKill', name: 'Acolyte: Soul Jar', description: 'As Acolyte, get a multikill with Reaper.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/Soul_Jar.png' },
+  { id: 'AcolyteJuggleLemurian', name: 'Acolyte: Javelin', description: 'As Acolyte, keep a Lemurian airborne.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/Javelin.png' },
+  { id: 'AcolyteUniqueSacrifices', name: 'Acolyte: Anima Echo', description: 'As Acolyte, sacrifice unique monsters.', category: 'Skill', iconUrl: 'https://riskofrain2.wiki.gg/images/Anima_Echo.png' },
+  { id: 'Enforcer2ClearChampRush', name: 'Enforcer: Impasse', description: 'As Enforcer, complete the Champ Rush.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/Impasse.png' },
+  { id: 'Enforcer2ClearGameMonsoon', name: 'Enforcer: Palisade', description: 'As Enforcer, beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/Palisade.png' },
+  { id: 'AcolyteClearUltima', name: 'Acolyte: Vessel', description: 'As Acolyte, clear the Ultima.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/Vessel.png' },
+  { id: 'AcolyteClearGameMonsoon', name: 'Acolyte: Twilight', description: 'As Acolyte, beat the game or obliterate on Monsoon.', category: 'Skin Unlock', iconUrl: 'https://riskofrain2.wiki.gg/images/Twilight.png' },
+
   // Artifacts
   { id: 'ObtainArtifactBomb', name: 'Trial of Spite', description: 'Complete the Trial of Spite.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/images/Artifact_of_Spite.png' },
   { id: 'ObtainArtifactCommand', name: 'Trial of Command', description: 'Complete the Trial of Command.', category: 'Artifact', iconUrl: 'https://riskofrain2.wiki.gg/images/Artifact_of_Command.png' },
@@ -280,44 +295,32 @@ export const ACHIEVEMENTS: AchievementDef[] = [
 
 // Comprehensive list extracted from user XML for "Unlock All" functionality.
 export const ALL_ACHIEVEMENTS_LIST = [
-  "AttackSpeed", "AutomationActivation", "BeatArena", "BurnToDeath", "CaptainBuyMegaDrone", "CaptainClearGameMonsoon", 
-  "CaptainVisitSeveralStages", "CompleteMainEnding", "CompleteMainEndingHard", "CarryLunarItems", 
-  "ChargeTeleporterWhileNearDeath", "CleanupDuty", "CommandoClearGameMonsoon", "CommandoFastFirstStageClear", 
-  "CommandoKillOverloadingWorm", "CommandoNonLunarEndurance", "Complete20Stages", "Complete30StagesCareer", 
-  "CompleteMultiBossShrine", "CompletePrismaticTrial", "CompleteTeleporter", "CompleteTeleporterWithoutInjury", 
-  "CompleteThreeStages", "CompleteThreeStagesWithoutHealing", "CompleteUnknownEnding", "CrocoClearGameMonsoon", 
-  "CrocoKillScavenger", "CrocoKillWeakEnemiesMilestone", "CrocoTotalInfectionsMilestone", "DefeatSuperRoboBallBoss", 
-  "Die20Times", "Die5Times", "Discover10UniqueTier1", "Discover5Equipment", "EngiArmy", "EngiClearGameMonsoon", 
-  "EngiClearTeleporterWithZeroMonsters", "EngiKillBossQuick", "FailShrineChance", "FindDevilAltar", "FindTimedChest", 
-  "FindUniqueNewtStatues", "FreeMage", "HardEliteBossKill", "HardHitter", "HuntressAllGlaiveBouncesKill", 
-  "HuntressClearGameMonsoon", "HuntressCollectCrowbars", "HuntressMaintainFullHealthOnFrozenWall", 
-  "KillBossQuantityInRun", "KillBossQuick", "KillElementalLemurians", "KillEliteMonster", "KillElitesMilestone", 
-  "KillGoldTitanInOneCycle", "KillTotalEnemies", "LoaderBigSlam", "LoaderClearGameMonsoon", "LoaderSpeedRun", 
-  "LogCollector", "LoopOnce", "MageAirborneMultiKill", "MageClearGameMonsoon", "MageFastBoss", "MageMultiKill", 
-  "MajorMultikill", "MaxHealingShrine", "MercClearGameMonsoon", "MercCompleteTrialWithFullHealth", "MercDontTouchGround", 
-  "MoveSpeed", "MultiCombatShrine", "NeverBackDown", "RepeatFirstTeleporter", "RepeatedlyDuplicateItems", 
-  "RescueTreebot", "StayAlive1", "SuicideHermitCrabs", "ToolbotClearGameMonsoon", "ToolbotGuardTeleporter", 
-  "ToolbotKillImpBossWithBfg", "TotalDronesRepaired", "TotalMoneyCollected", "TreebotClearGameMonsoon", 
-  "TreebotDunkClayBoss", "TreebotLowHealthTeleporter", "UseThreePortals", "ObtainArtifactBomb", "ObtainArtifactCommand", 
-  "ObtainArtifactEliteOnly", "ObtainArtifactEnigma", "ObtainArtifactFriendlyFire", "ObtainArtifactGlass", 
-  "ObtainArtifactMixEnemy", "ObtainArtifactMonsterTeamGainsItems", "ObtainArtifactRandomSurvivorOnRespawn", 
-  "ObtainArtifactSacrifice", "ObtainArtifactShadowClone", "ObtainArtifactSingleMonsterType", "ObtainArtifactSwarms", 
-  "ObtainArtifactTeamDeath", "ObtainArtifactWeakAssKnees", "ObtainArtifactWispOnDeath", "Bandit2ClearGameMonsoon", 
-  "Bandit2ConsecutiveReset", "Bandit2RevolverFinale", "Bandit2StackSuperBleed", "ToolbotBeatArenaLater", 
-  "MercXSkillsInYSeconds", "TreebotBigHeal", "LoaderKillLoaders", "CaptainSupplyDropFinale", "RailgunnerDealMassiveDamage", 
-  "CompleteVoidEnding", "RailgunnerClearGameMonsoon", "VoidSurvivorClearGameMonsoon", "RailgunnerAirborneMultiKill", 
-  "RailgunnerConsecutiveWeakPoints", "ObtainArtifactDelusion", "ObtainArtifactDevotion", "SeekerAirMultiHit", 
-  "DefeatFalseSon", "UnlockFalseSon", "ActivateChef", "CommandoClearMeridianEvent", "HuntressClearMeridianEvent", 
-  "Bandit2ClearMeridianEvent", "ToolbotClearMeridianEvent", "EngiClearMeridianEvent", "MageClearMeridianEvent", 
-  "MercClearMeridianEvent", "TreebotClearMeridianEvent", "LoaderClearMeridianEvent", "CrocoClearMeridianEvent", 
-  "CaptainClearMeridianEvent", "RailgunnerClearMeridianEvent", "VoidSurvivorClearMeridianEvent", "SeekerClearGameMonsoon", 
-  "FalseSonLaserMultiKill", "FalseSonClearGameMonsoon", "BarbecueQuantityBisonInRun", "ChefClearGameMonsoon", 
-  "ObtainArtifactRebirth", "FalseSonKillMithrixWithGoldenGal", "FalseSonGrowthChallenge", "SeekerPerfect20Meditation", 
-  "BurnMithrix", "NukeSojourn", "RolyPolyHitFiveAirEnemies", "SeekerClearMeridianEvent", "FalseSonClearMeridianEvent", 
-  "ChefMeridianEvent", "FreeDrifter", "DroneTechTrickshot", "DroneTechDefeatVultureBossWhileAirborne", 
-  "DroneTechJuggleLemurian", "DroneTechUniqueDrones", "DroneTechClearGameMonsoon", "DrifterJunkCubeAchievement", 
-  "DrifterTornadoSlamAchievement", "DrifterTinkerAchievement", "DrifterClearGameMonsoon", "BeatVoidFields",
-  "ObtainArtifactPrestige"
+  "AttackSpeed", "AutomationActivation", "BeatArena", "BurnToDeath", "CaptainBuyMegaDrone", "CaptainClearGameMonsoon", "CaptainVisitSeveralStages", "CompleteMainEnding",
+  "CompleteMainEndingHard", "CarryLunarItems", "ChargeTeleporterWhileNearDeath", "CleanupDuty", "CommandoClearGameMonsoon", "CommandoFastFirstStageClear", "CommandoKillOverloadingWorm", "CommandoNonLunarEndurance",
+  "Complete20Stages", "Complete30StagesCareer", "CompleteMultiBossShrine", "CompletePrismaticTrial", "CompleteTeleporter", "CompleteTeleporterWithoutInjury", "CompleteThreeStages", "CompleteThreeStagesWithoutHealing",
+  "CompleteUnknownEnding", "CrocoClearGameMonsoon", "CrocoKillScavenger", "CrocoKillWeakEnemiesMilestone", "CrocoTotalInfectionsMilestone", "DefeatSuperRoboBallBoss", "Die20Times", "Die5Times",
+  "Discover10UniqueTier1", "Discover5Equipment", "EngiArmy", "EngiClearGameMonsoon", "EngiClearTeleporterWithZeroMonsters", "EngiKillBossQuick", "FailShrineChance", "FindDevilAltar",
+  "FindTimedChest", "FindUniqueNewtStatues", "FreeMage", "HardEliteBossKill", "HardHitter", "HuntressAllGlaiveBouncesKill", "HuntressClearGameMonsoon", "HuntressCollectCrowbars",
+  "HuntressMaintainFullHealthOnFrozenWall", "KillBossQuantityInRun", "KillBossQuick", "KillElementalLemurians", "KillEliteMonster", "KillElitesMilestone", "KillGoldTitanInOneCycle", "KillTotalEnemies",
+  "LoaderBigSlam", "LoaderClearGameMonsoon", "LoaderSpeedRun", "LogCollector", "LoopOnce", "MageAirborneMultiKill", "MageClearGameMonsoon", "MageFastBoss",
+  "MageMultiKill", "MajorMultikill", "MaxHealingShrine", "MercClearGameMonsoon", "MercCompleteTrialWithFullHealth", "MercDontTouchGround", "MoveSpeed", "MultiCombatShrine",
+  "NeverBackDown", "RepeatFirstTeleporter", "RepeatedlyDuplicateItems", "RescueTreebot", "StayAlive1", "SuicideHermitCrabs", "ToolbotClearGameMonsoon", "ToolbotGuardTeleporter",
+  "ToolbotKillImpBossWithBfg", "TotalDronesRepaired", "TotalMoneyCollected", "TreebotClearGameMonsoon", "TreebotDunkClayBoss", "TreebotLowHealthTeleporter", "UseThreePortals", "ObtainArtifactBomb",
+  "ObtainArtifactCommand", "ObtainArtifactEliteOnly", "ObtainArtifactEnigma", "ObtainArtifactFriendlyFire", "ObtainArtifactGlass", "ObtainArtifactMixEnemy", "ObtainArtifactMonsterTeamGainsItems", "ObtainArtifactRandomSurvivorOnRespawn",
+  "ObtainArtifactSacrifice", "ObtainArtifactShadowClone", "ObtainArtifactSingleMonsterType", "ObtainArtifactSwarms", "ObtainArtifactTeamDeath", "ObtainArtifactWeakAssKnees", "ObtainArtifactWispOnDeath", "Bandit2ClearGameMonsoon",
+  "Bandit2ConsecutiveReset", "Bandit2RevolverFinale", "Bandit2StackSuperBleed", "ToolbotBeatArenaLater", "MercXSkillsInYSeconds", "TreebotBigHeal", "LoaderKillLoaders", "CaptainSupplyDropFinale",
+  "RailgunnerDealMassiveDamage", "CompleteVoidEnding", "RailgunnerClearGameMonsoon", "VoidSurvivorClearGameMonsoon", "RailgunnerAirborneMultiKill", "RailgunnerConsecutiveWeakPoints", "ObtainArtifactDelusion", "ObtainArtifactDevotion",
+  "SeekerAirMultiHit", "DefeatFalseSon", "UnlockFalseSon", "ActivateChef", "CommandoClearMeridianEvent", "HuntressClearMeridianEvent", "Bandit2ClearMeridianEvent", "ToolbotClearMeridianEvent",
+  "EngiClearMeridianEvent", "MageClearMeridianEvent", "MercClearMeridianEvent", "TreebotClearMeridianEvent", "LoaderClearMeridianEvent", "CrocoClearMeridianEvent", "CaptainClearMeridianEvent", "RailgunnerClearMeridianEvent",
+  "VoidSurvivorClearMeridianEvent", "SeekerClearGameMonsoon", "FalseSonLaserMultiKill", "FalseSonClearGameMonsoon", "BarbecueQuantityBisonInRun", "ChefClearGameMonsoon", "ObtainArtifactRebirth", "FalseSonKillMithrixWithGoldenGal",
+  "FalseSonGrowthChallenge", "SeekerPerfect20Meditation", "BurnMithrix", "NukeSojourn", "RolyPolyHitFiveAirEnemies", "SeekerClearMeridianEvent", "FalseSonClearMeridianEvent", "ChefMeridianEvent",
+  "FreeDrifter", "DroneTechTrickshot", "DroneTechDefeatVultureBossWhileAirborne", "DroneTechJuggleLemurian", "DroneTechClearGameMonsoon", "DrifterJunkCubeAchievement", "DrifterTornadoSlamAchievement", "DrifterTinkerAchievement",
+  "DroneTechUniqueDrones", "CommandoPurge", "HuntressPurge", "ToolbotPurge", "Bandit2Decompile", "EngiPurge", "MercPurge", "MageDecompile",
+  "TreebotDecompile", "LoaderDecompile", "CrocoPurge", "CaptainDecompile", "ObtainArtifactPrestige", "DrifterClearGameMonsoon", "ChampRushRitualCompleted", "Enforcer2RepeatedlyDamageMagmaWorm",
+  "Enforcer2ParryVagrant", "Enforcer2BlockXTeleporter", "Enforcer2TankTitanLaser", "EngiBatteryDrone", "HuntressCollectArtifact", "MagePillarSkip", "AcolyteReaperMultiKill", "AcolyteJuggleLemurian",
+  "AcolyteUniqueSacrifices", "CrocoClearGameRestack", "CommandoBeatBrotherMaxKarma", "TreebotClearGameWithLunars", "CommandoClearChampRush", "HuntressClearChampRush", "AcolyteClearUltima", "AcolyteClearGameMonsoon",
+  "Enforcer2ClearChampRush", "Enforcer2ClearGameMonsoon", "ChefClearChampRush", "FalseSonClearGameHexes", "SeekerClearChampRush", "VoidSurvivorClearGameHexes", "RailgunnerClearGameHexes", "CaptainClearUltima",
+  "CrocoClearChampRush", "LoaderClearGameHexes", "TreebotClearUltima", "MercClearGameHexes", "MageClearUltima", "EngiClearUltima", "ToolbotClearGameHexes", "Bandit2ClearUltima",
 ];
 
 // Comprehensive list of Unlock Tokens for stats section (Items, Equip, Survivors, Artifacts, Skins)
@@ -337,15 +340,15 @@ export const ALL_UNLOCKS = [
   "Artifacts.TeamDeath", "Artifacts.WeakAssKnees", "Artifacts.WispOnDeath", "Artifacts.Rebirth", "Artifacts.Prestige",
 
   // --- Items (Common/White) ---
-  "Items.Bear", "Items.Hoof", "Items.Crowbar", "Items.Medkit", "Items.Firework", 
-  "Items.SecondarySkillMagazine", "Items.TreasureCache", "Items.BossDamageBonus", "Items.CritGlasses", 
-  "Items.PersonalShield", "Items.Mushroom", "Items.AttackSpeedOnCrit", "Items.BleedOnHit", 
-  "Items.SprintOutOfCombat", "Items.FallBoots", "Items.WardOnLevel", "Items.Phasing", 
-  "Items.HealOnCrit", "Items.HealWhileSafe", "Items.EquipmentMagazine", "Items.NovaOnHeal", 
-  "Items.ShockNearby", "Items.Infusion", "Items.WarCryOnMultiKill", "Items.Clover", 
-  "Items.Bandolier", "Items.ChainLightning", "Items.BounceNearby", "Items.StickyBomb", 
-  "Items.StunChanceOnHit", "Items.BarrierOnOverHeal", "Items.GoldOnHit", "Items.Thorns", 
-  "Items.DroneWeapons", "Items.Icicle", "Items.GhostOnKill", "Items.MageAttunement", 
+  "Items.Bear", "Items.Hoof", "Items.Crowbar", "Items.Medkit", "Items.Firework",
+  "Items.SecondarySkillMagazine", "Items.TreasureCache", "Items.BossDamageBonus", "Items.CritGlasses",
+  "Items.PersonalShield", "Items.Mushroom", "Items.AttackSpeedOnCrit", "Items.BleedOnHit",
+  "Items.SprintOutOfCombat", "Items.FallBoots", "Items.WardOnLevel", "Items.Phasing",
+  "Items.HealOnCrit", "Items.HealWhileSafe", "Items.EquipmentMagazine", "Items.NovaOnHeal",
+  "Items.ShockNearby", "Items.Infusion", "Items.WarCryOnMultiKill", "Items.Clover",
+  "Items.Bandolier", "Items.ChainLightning", "Items.BounceNearby", "Items.StickyBomb",
+  "Items.StunChanceOnHit", "Items.BarrierOnOverHeal", "Items.GoldOnHit", "Items.Thorns",
+  "Items.DroneWeapons", "Items.Icicle", "Items.GhostOnKill", "Items.MageAttunement",
   "Items.FlatHealth", "Items.Tooth", "Items.Pearl", "Items.ShinyPearl", "Items.BonusGoldPackOnKill",
   "Items.Squid", "Items.LaserTurbine", "Items.Seed", "Items.HardenedGlass", "Items.FocusConvergence",
   "Items.TitanGoldDuringTP", "Items.SprintWisp", "Items.BarrierOnKill", "Items.ArmorPlate",
